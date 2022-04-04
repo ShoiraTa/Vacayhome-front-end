@@ -1,8 +1,9 @@
 import React from 'react';
+import { Carousel } from 'react-bootstrap';
 
 function Home() {
   return (
-    <p>Welcome to Vacay Home</p>
+    <h1>Welcome to Vacay Home</h1>
   );
 }
 
