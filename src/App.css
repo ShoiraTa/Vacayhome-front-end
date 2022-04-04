@@ -26,3 +26,8 @@
   display: block;
   margin: auto;
 }
+
+.access-btn {
+  border: none;
+  background: none;
+}
