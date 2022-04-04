@@ -1,3 +1,12 @@
+body {
+  overflow: hidden;
+  height: 100vh;
+  background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hero-soneva-jani-chapter-two-by-aksham-abdul-ghadir-6-1619208233.jpg?crop=0.563xw:1.00xh;0.220xw,0&resize=640:*);
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: grayscale(0.5);
+}
+
 .home-images {
   width: 80%;
   height: 80%;
