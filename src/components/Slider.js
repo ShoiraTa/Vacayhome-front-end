@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 function Slider() {
   return (
     <Carousel className="carousel">
-      <Carousel.Item interval={1000} className="carousel-item">
+      <Carousel.Item className="carousel-item">
         <img
           src="https://traveler.marriott.com/wp-content/uploads/2021/02/HuatulcoOaxaca_6VillaEscondida_9.jpg"
           className="d-block w-100"
