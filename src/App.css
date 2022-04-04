@@ -6,3 +6,12 @@
   width: 50%;
   margin-right: -50%;
 }
+
+.carousel-inner {
+  position: relative;
+  left: 34%;
+}
+
+.carousel-caption {
+  text-align: inherit;
+}

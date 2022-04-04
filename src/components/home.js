@@ -4,9 +4,9 @@ import { Carousel } from 'react-bootstrap';
 function Home() {
   return (
     <>
-      <h1>Welcome to Vacay Home</h1>
+      <h1 className="mb-5">Welcome to Vacay Home</h1>
 
-      <Carousel fade>
+      <Carousel fade className="mt-5">
         <Carousel.Item>
           <img className="d-block home-images" src="https://www.lovethispic.com/uploaded_images/106830-Tropical-Vacation-Bedroom-With-Panoramic-Ocean-View.jpg" alt="Tropical Vacation Bedroom" />
           <Carousel.Caption>
@@ -15,9 +15,9 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block home-images" src="https://www.fancypantshomes.com/wp-content/uploads/2021/06/The-butterfly-house-bali.jpg" alt="Tropical Vacation Bedroom" />
+          <img className="d-block home-images" src="https://media.istockphoto.com/photos/3d-rendering-beautiful-luxury-bedroom-suite-in-hotel-with-tv-and-picture-id1213885014?k=20&m=1213885014&s=612x612&w=0&h=8TV57yZ2jqldDOjR8sK7xADHLH_0cSMXY-KXNLoS1Jw=" alt="Tropical Vacation Bedroom" />
           <Carousel.Caption>
-            <p>Get closer to nature with this comfortable Vacation home</p>
+            <p>Enjoy comfort at it&apos;s best</p>
             <button type="submit">See more details</button>
           </Carousel.Caption>
         </Carousel.Item>
@@ -29,9 +29,9 @@ function Home() {
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img className="d-block home-images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhYhgCMWFwo4ul4-ug2k866TYSViVyGdU5cw&usqp=CAU" alt="Tropical Vacation Bedroom" />
+          <img className="d-block home-images" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/37/df/96/sandals-south-coast.jpg?w=900&h=-1&s=1" alt="Tropical Vacation Bedroom" />
           <Carousel.Caption>
-            <p>Want something different??... Get a floating home</p>
+            <p>Luxury suite in the carribean</p>
             <button type="submit">See more details</button>
           </Carousel.Caption>
         </Carousel.Item>
