@@ -1,31 +1,7 @@
 body {
-  overflow: hidden;
-  height: 100vh;
-  background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hero-soneva-jani-chapter-two-by-aksham-abdul-ghadir-6-1619208233.jpg?crop=0.563xw:1.00xh;0.220xw,0&resize=640:*);
-  background-size: cover;
-  background-repeat: no-repeat;
-  backdrop-filter: grayscale(0.5);
+margin: 0;
 }
 
-.home-images {
-  width: 80%;
-  height: 80%;
-  border-radius: 10px;
-}
-
-.carousel-item {
-  width: 50%;
-  margin-right: -50%;
-}
-
-.carousel-inner {
-  position: relative;
-  left: 34%;
-}
-
-.carousel-caption {
-  text-align: inherit;
-}
 .carousel {
   position: absolute;
   left: 0;
@@ -54,4 +30,47 @@ body {
 .access-btn {
   border: none;
   background: none;
+}
+
+/* Homepage carousel */
+
+.react-multi-carousel-item{
+  margin: 1rem;
+}
+
+.carousel-img-container{
+  width: 100%;
+  height: 80%;
+  border-radius: 100px;
+}
+
+.carousel-img-container img{
+  height: 100%;
+  border-radius: 10px;
+}
+
+.homepage-container{
+
+}
+
+.homepage-header-container{
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+  align-items: center;
+  flex-direction: column; 
+}
+
+.homepage-header-container h1, p{
+  z-index: 1;
+}
+
+.carousel-description span{
+  color: gray;
+}
+
+.plant-img{
+  position: absolute;
+  width: 350px;
+
 }
