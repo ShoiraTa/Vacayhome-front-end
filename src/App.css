@@ -1,5 +1,5 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
 
 .carousel {
@@ -30,4 +30,43 @@
 .access-btn {
   border: none;
   background: none;
+}
+
+/* Homepage carousel */
+
+.react-multi-carousel-item {
+  margin: 1rem;
+}
+
+.carousel-img-container {
+  width: 100%;
+  height: 80%;
+  border-radius: 100px;
+}
+
+.carousel-img-container img {
+  height: 100%;
+  border-radius: 10px;
+}
+
+.homepage-header-container {
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homepage-header-container h1,
+p {
+  z-index: 1;
+}
+
+.carousel-description span {
+  color: gray;
+}
+
+.plant-img {
+  position: absolute;
+  width: 350px;
 }
