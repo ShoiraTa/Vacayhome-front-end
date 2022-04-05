@@ -1,5 +1,5 @@
 body {
-margin: 0;
+  margin: 0;
 }
 
 .carousel {
@@ -34,43 +34,39 @@ margin: 0;
 
 /* Homepage carousel */
 
-.react-multi-carousel-item{
+.react-multi-carousel-item {
   margin: 1rem;
 }
 
-.carousel-img-container{
+.carousel-img-container {
   width: 100%;
   height: 80%;
   border-radius: 100px;
 }
 
-.carousel-img-container img{
+.carousel-img-container img {
   height: 100%;
   border-radius: 10px;
 }
 
-.homepage-container{
-
-}
-
-.homepage-header-container{
+.homepage-header-container {
   display: flex;
   justify-content: center;
   height: 30vh;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
 }
 
-.homepage-header-container h1, p{
+.homepage-header-container h1,
+p {
   z-index: 1;
 }
 
-.carousel-description span{
+.carousel-description span {
   color: gray;
 }
 
-.plant-img{
+.plant-img {
   position: absolute;
   width: 350px;
-
 }
