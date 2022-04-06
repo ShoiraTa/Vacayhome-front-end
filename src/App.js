@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Homepage/Home';
+import Detail from './components/Details';
 import Login from './components/LoginRegister/Login';
 import Register from './components/LoginRegister/Register';
 import Reservantion from './components/Reservations/Reservation';

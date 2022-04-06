@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import Detail from './Details';
-import { fetchHouses } from '../redux/rooms/rooms';
+import Detail from '../Details';
+import { fetchRooms } from '../../redux/rooms/rooms';
 
 function Slider() {
   const responsive = {
@@ -35,7 +35,7 @@ function Slider() {
     setSelectedHouse(e);
   };
   useEffect(() => {
-    dispatch(fetchHouses());
+    dispatch(fetchRooms());
   }, []);
   return (
     <Carousel
@@ -61,16 +61,15 @@ function Slider() {
             onClick={() => handleSelected(house)}
           >
             <img
-              src="https://images.squarespace-cdn.com/content/v1/5e72c8bfe21ad940ba788673/1621016255763-WDHM79J11KCDQW4DIKFX/airbnb-short-term-versus-long-term-rentals-thumbnail.jpg"
-              className="d-block w-100"
+              src={house.image_url}
               alt="travel vacation"
             />
 
             <div className="carousel-description">
               <span>3&nbsp;  guests1&nbsp;  bedroom2&nbsp;  beds1&nbsp;  bath</span>
               <p>
-                <strong>Marisha’s Apartment&nbsp; </strong>
-                Light and cosy apartment with good location
+                <strong>{house.name}</strong>
+                {house.description}
               </p>
             </div>
           </div>
