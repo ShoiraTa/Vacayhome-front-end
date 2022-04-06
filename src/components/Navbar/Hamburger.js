@@ -6,7 +6,7 @@ function Hamburger() {
     <>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="d-md-none">
+        <Nav className="d-md-none px-2">
           <Nav.Link href="/">LISTINGS</Nav.Link>
           <Nav.Link href="/">PLACES</Nav.Link>
           <Nav.Link href="/">BOOKINGS</Nav.Link>
