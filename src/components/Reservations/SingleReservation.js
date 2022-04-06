@@ -1,12 +1,9 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-const SingleReservation = ({ reservation, rooms }) => {
-  console.log(rooms);
-
-  return (
-    <div className="reservation-container">
-      {
+const SingleReservation = ({ reservation, rooms }) => (
+  <div className="reservation-container">
+    {
       rooms.map((room) => (
         room.id === reservation.house_id
         && (
@@ -49,9 +46,8 @@ const SingleReservation = ({ reservation, rooms }) => {
         )
       ))
     }
-    </div>
+  </div>
 
-  );
-};
+);
 
 export default SingleReservation;

@@ -75,12 +75,12 @@ p {
   align-items: center;
 }
 
-.reservation-container{
+.reservation-container {
   width: 100%;
   display: contents;
 }
 
-.reservation{
+.reservation {
   width: 50%;
 }
 
@@ -164,7 +164,7 @@ p {
   color: #97bf02;
 }
 
-.dropdown-menu-end{
+.dropdown-menu-end {
   width: 100%;
   border: none;
 }
@@ -200,29 +200,26 @@ p {
     justify-content: center;
   }
 
-  .reservation{
+  .reservation {
     width: 90%;
   }
 }
 
 /* User Reservations */
-.reservations-container{
-  display: flex;
-}
 
-.card{
+.card {
   margin-bottom: 2rem;
   color: black;
 }
 
-.card-desc{
+.card-desc {
   padding: 1rem;
 }
 
-.card-title{
+.card-title {
   margin-bottom: 2rem;
 }
 
-.card-text{
+.card-text {
   margin-bottom: 0;
 }
