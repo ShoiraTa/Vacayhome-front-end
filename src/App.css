@@ -71,7 +71,7 @@ p {
 .reservations-container{
   height: 100vh;
   color: #fff;
-  justify-content: center;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +81,7 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 50%;
+  margin-top: 9%;
 }
 .reservations-header{
   border-bottom: 1.5px solid #C4DD78;
@@ -105,13 +105,13 @@ p {
 }
 
 .reservations-buttons{
-  margin: 2rem;
+  margin: 2rem 0;
   display: flex;
   width: 100%;
   justify-content: space-around;
 }
 
-.book-btn, #dropdown-menu-align-end{
+.book-btn, #dropdown-menu-align-end, .react-datepicker-wrapper {
   width: 200px;
   height: 60px;
   border-radius: 30px;
@@ -123,8 +123,24 @@ p {
   font-size: 1.1rem;
   box-shadow: none;
 }
+.react-datepicker-wrapper{
+  width: 200px!important;
+  display: flex!important;
+  align-items: center;
+  justify-content: center;
+}
 
-.book-btn:hover, #dropdown-menu-align-end{
+.react-datepicker__input-container, .react-datepicker__input-container input{
+  width: 100px!important;
+  outline: none;
+}
+
+.react-datepicker-wrapper input{
+  color: #97BF02;
+  border: none;
+}
+
+.book-btn:hover, #dropdown-menu-align-end {
   color: #fff;
   background: #97BF02;
   border: 2px solid #C4DD78;
