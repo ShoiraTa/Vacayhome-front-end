@@ -46,6 +46,7 @@ body {
 
 .carousel-img-container img {
   height: 100%;
+  width: 80%;
   border-radius: 10px;
 }
 

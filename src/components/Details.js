@@ -6,7 +6,7 @@ import { BiArrowBack } from 'react-icons/bi';
 
 const Detail = (props) => {
   const {
-    image_url, name, description, price, location,
+    image_url, name, description, price, address, city, country,
   } = props.props;
   return (
     <>
@@ -21,7 +21,11 @@ const Detail = (props) => {
         <p>
           This vacation home is located in
           {' '}
-          {location}
+          {address}
+&nbsp;
+          {city}
+&nbsp;
+          {country}
         </p>
         <p>
           For the price of
