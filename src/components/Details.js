@@ -1,17 +1,17 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable camelcase */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 
 const Detail = (props) => {
-  console.log(props);
   const {
     image_url, name, description, price, location,
-  } = props;
+  } = props.props;
   return (
     <>
       <div>
-        <img src={image_url} alt="TRopical houses" />
+        <img src={image_url} alt="Tropical houses" />
       </div>
       <div>
         <h3>{name}</h3>
