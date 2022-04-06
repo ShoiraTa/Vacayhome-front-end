@@ -66,7 +66,123 @@ p {
   color: gray;
 }
 
-.plant-img {
-  position: absolute;
-  width: 350px;
+/* Reservations */
+.reservations-container {
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reservations-description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 9%;
+}
+
+.reservations-header {
+  border-bottom: 1.5px solid #c4dd78;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.reservations-description h1 {
+  font-size: 3rem;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.reservations-description p {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.reservations-buttons {
+  margin: 2rem 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.book-btn,
+#dropdown-menu-align-end,
+.react-datepicker-wrapper {
+  width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #97bf02;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  box-shadow: none;
+}
+
+.react-datepicker-wrapper {
+  width: 200px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  width: 100px !important;
+  outline: none;
+}
+
+.react-datepicker-wrapper input {
+  color: #97bf02;
+  border: none;
+}
+
+.book-btn:hover,
+#dropdown-menu-align-end {
+  color: #fff;
+  background: #97bf02;
+  border: 2px solid #c4dd78;
+}
+
+#dropdown-menu-align-end:hover {
+  background: #fff;
+  color: #97bf02;
+}
+
+@media only screen and (max-width: 769px) {
+  .reservations-description {
+    padding: 1rem;
+  }
+
+  .reservations-description h1 {
+    font-size: 3rem;
+    letter-spacing: 1px;
+    line-height: 4rem;
+  }
+
+  .reservations-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .react-datepicker-wrapper,
+  .book-btn,
+  .dropdown {
+    width: 80% !important;
+    margin-bottom: 1.5rem;
+  }
+
+  #dropdown-menu-align-end {
+    width: 100%;
+  }
+
+  .reservations-container {
+    justify-content: center;
+  }
 }
