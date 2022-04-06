@@ -1,17 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchRooms } from '../../redux/rooms/rooms';
 
-const SingleReservation = ({ reservation }) => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchRooms());
-  }, []);
-  const rooms = useSelector((state) => state.roomsReducer);
-
-  console.log(reservation);
+const SingleReservation = ({ reservation, rooms }) => {
+  console.log(rooms);
 
   return (
     <div className="reservation-container">
@@ -19,7 +10,7 @@ const SingleReservation = ({ reservation }) => {
       rooms.map((room) => (
         room.id === reservation.house_id
         && (
-        <div className="reservation">
+        <div key={reservation.id} className="reservation">
           <Card>
             <Card.Header as="h5">
               Reservation #

@@ -199,6 +199,10 @@ p {
   .reservations-container {
     justify-content: center;
   }
+
+  .reservation{
+    width: 90%;
+  }
 }
 
 /* User Reservations */
