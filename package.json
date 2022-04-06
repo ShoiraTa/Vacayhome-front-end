@@ -13,6 +13,7 @@
     "react-bootstrap-date-picker": "^5.1.0",
     "react-datepicker": "^4.7.0",
     "react-dom": "^18.0.0",
+    "react-icons": "^4.3.1",
     "react-multi-carousel": "^2.8.0",
     "react-redux": "^7.2.7",
     "react-router": "^6.3.0",

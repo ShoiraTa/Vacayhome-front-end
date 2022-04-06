@@ -11,6 +11,7 @@ import { postReservations } from '../../redux/reservations/reservation';
 const Reservantion = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [title, setTitle] = useState('Location');
+  // const [titleAccomodation, setTitleAccomodation] = useState('Select Accom');
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -23,10 +24,13 @@ const Reservantion = () => {
   const { houseid } = useParams();
   const { userid } = useParams();
 
+  const [roomId, setroomId] = useState(houseid);
+
   let image = '';
   let location = '';
+
   rooms.roomsReducer.map((element) => {
-    if (element.id === parseInt(houseid, 10)) {
+    if (element.id === parseInt(roomId, 10)) {
       image = element.image_url;
       location = element.address;
     }
@@ -38,7 +42,7 @@ const Reservantion = () => {
       booking:
       {
         user_id: userid,
-        house_id: houseid,
+        house_id: roomId,
         date: startDate.toLocaleDateString(),
       },
     };
@@ -46,10 +50,7 @@ const Reservantion = () => {
     dispatch(postReservations(postData));
   };
 
-  const handleLocation = (e) => {
-    e.preventDefault();
-    setTitle(location);
-  };
+  console.log('here', roomId, 0);
 
   return (
     <>
@@ -72,10 +73,21 @@ const Reservantion = () => {
           <p>
             When the user clicks the Delete item link in the navigation panel they
           </p>
+          {
+           parseInt(houseid, 10) === 0 && (
+           <select onChange={(e) => setroomId(e.target.value)} align="end" value="Select" id="dropdown-menu-align-end">
+             { rooms.roomsReducer.map((room) => (
+               <option key={room.id} value={room.id}>
+                 {room.address}
+               </option>
+             ))}
+           </select>
+           )
+          }
           <div className="reservations-buttons">
             <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
             <DropdownButton align="end" title={title} id="dropdown-menu-align-end">
-              <Dropdown.Item eventKey="1" onClick={(e) => handleLocation(e)}>{location}</Dropdown.Item>
+              <Dropdown.Item eventKey="1" onClick={() => setTitle(location)}>{location}</Dropdown.Item>
             </DropdownButton>
             <button type="submit" onClick={createReservation} className="book-btn">Book now</button>
           </div>
