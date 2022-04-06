@@ -66,7 +66,71 @@ p {
   color: gray;
 }
 
-.plant-img {
-  position: absolute;
-  width: 350px;
+
+/* Reservations */
+.reservations-container{
+  height: 100vh;
+  color: #fff;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reservations-description{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+.reservations-header{
+  border-bottom: 1.5px solid #C4DD78;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.reservations-description h1{
+  font-size: 3rem;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.reservations-description p{
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.reservations-buttons{
+  margin: 2rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.book-btn, #dropdown-menu-align-end{
+  width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #97BF02;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  box-shadow: none;
+}
+
+.book-btn:hover, #dropdown-menu-align-end{
+  color: #fff;
+  background: #97BF02;
+  border: 2px solid #C4DD78;
+}
+
+#dropdown-menu-align-end:hover{
+  background: #fff;
+  color: #97BF02;
 }
