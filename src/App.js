@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home';
-import Login from './components/Login';
-import Register from './components/Register';
+import Home from './components/Homepage/Home';
+import Login from './components/LoginRegister/Login';
+import Register from './components/LoginRegister/Register';
 import Reservantion from './components/Reservations/Reservation';
 
 function App() {

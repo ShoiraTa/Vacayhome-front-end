@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Slider from './Slider';
-import Logo from '../assets/images/VacayHome.png';
+import Logo from '../../assets/images/VacayHome.png';
 
 function Login() {
   const navigate = useNavigate();
