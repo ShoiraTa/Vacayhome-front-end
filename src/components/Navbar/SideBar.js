@@ -3,7 +3,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 function SideBar() {
   return (
-    <ListGroup defaultActiveKey="/" variant="flush">
+    <ListGroup defaultActiveKey="/" variant="flush" className="d-none d-md-block">
       <ListGroup.Item action href="/" variant="success">
         LISTINGS
       </ListGroup.Item>
