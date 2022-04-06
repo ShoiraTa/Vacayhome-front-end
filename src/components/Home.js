@@ -17,10 +17,10 @@ function Home() {
         </div>
         <Container fluid>
           <Row>
-            <Col xs={2} md={2} lg={2}>
+            <Col sm={2} md={2} lg={2}>
               <SideBar />
             </Col>
-            <Col xs={10} md={10} lg={10}>
+            <Col sm={10} md={10} lg={10}>
               <div>
                 <SliderHomepage />
               </div>

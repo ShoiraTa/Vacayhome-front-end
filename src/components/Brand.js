@@ -5,7 +5,7 @@ import Logo from '../assets/images/VacayHomeLeaf.png';
 
 function Brand() {
   return (
-    <Navbar bg="dark" variant="dark" className="py-0">
+    <Navbar bg="dark" variant="dark" className="py-1">
       <Container>
         <Navbar.Brand href="/" className="d-flex">
           <img
