@@ -5,6 +5,7 @@ import Home from './components/Homepage/Home';
 import Login from './components/LoginRegister/Login';
 import Register from './components/LoginRegister/Register';
 import Reservantion from './components/Reservations/Reservation';
+import UserReservations from './components/Reservations/UserReservations';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path="/:house_is/reservantion" element={<Reservantion />} />
+        <Route path=":userid/:houseid/reservation" element={<Reservantion />} />
+        <Route path=":userid/reservations" element={<UserReservations />} />
       </Routes>
     </>
   );

@@ -4,10 +4,13 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { fetchRooms } from '../../redux/rooms/rooms';
+import { postReservations } from '../../redux/reservations/reservation';
 
 const Reservantion = () => {
   const [startDate, setStartDate] = useState(new Date());
+  const [title, setTitle] = useState('Location');
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -15,8 +18,38 @@ const Reservantion = () => {
   }, []);
 
   const rooms = useSelector((state) => state);
+  const reservationPost = useSelector((state) => state.reservationsReducer);
 
-  console.log(rooms);
+  const { houseid } = useParams();
+  const { userid } = useParams();
+
+  let image = '';
+  let location = '';
+  rooms.roomsReducer.map((element) => {
+    if (element.id === parseInt(houseid, 10)) {
+      image = element.image_url;
+      location = element.address;
+    }
+    return image;
+  });
+
+  const createReservation = () => {
+    const postData = {
+      booking:
+      {
+        user_id: userid,
+        house_id: houseid,
+        date: startDate.toLocaleDateString(),
+      },
+    };
+
+    dispatch(postReservations(postData));
+  };
+
+  const handleLocation = (e) => {
+    e.preventDefault();
+    setTitle(location);
+  };
 
   return (
     <>
@@ -27,7 +60,7 @@ const Reservantion = () => {
           325deg,
           rgba(87, 111, 1, 0.777) 0%,
           rgba(150, 191, 2, 0.93) 100%
-          ),url(${('https://images.squarespace-cdn.com/content/v1/5e72c8bfe21ad940ba788673/1621016255763-WDHM79J11KCDQW4DIKFX/airbnb-short-term-versus-long-term-rentals-thumbnail.jpg')})`,
+          ),url(${(image)})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
@@ -41,16 +74,12 @@ const Reservantion = () => {
           </p>
           <div className="reservations-buttons">
             <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
-            <DropdownButton align="end" title="Location" id="dropdown-menu-align-end">
-              <Dropdown.Item eventKey="1">Action</Dropdown.Item>
-              <Dropdown.Item eventKey="2">Another action</Dropdown.Item>
-              <Dropdown.Item eventKey="3">Something else here</Dropdown.Item>
-              <Dropdown.Divider />
-              <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+            <DropdownButton align="end" title={title} id="dropdown-menu-align-end">
+              <Dropdown.Item eventKey="1" onClick={(e) => handleLocation(e)}>{location}</Dropdown.Item>
             </DropdownButton>
-            <button type="submit" className="book-btn">Book now</button>
+            <button type="submit" onClick={createReservation} className="book-btn">Book now</button>
           </div>
-
+          { reservationPost.status === 201 && <p>Reservation was successful!</p>}
         </div>
       </div>
     </>

@@ -75,6 +75,15 @@ p {
   align-items: center;
 }
 
+.reservation-container{
+  width: 100%;
+  display: contents;
+}
+
+.reservation{
+  width: 50%;
+}
+
 .reservations-description {
   display: flex;
   align-items: center;
@@ -155,6 +164,11 @@ p {
   color: #97bf02;
 }
 
+.dropdown-menu-end{
+  width: 100%;
+  border: none;
+}
+
 @media only screen and (max-width: 769px) {
   .reservations-description {
     padding: 1rem;
@@ -185,4 +199,26 @@ p {
   .reservations-container {
     justify-content: center;
   }
+}
+
+/* User Reservations */
+.reservations-container{
+  display: flex;
+}
+
+.card{
+  margin-bottom: 2rem;
+  color: black;
+}
+
+.card-desc{
+  padding: 1rem;
+}
+
+.card-title{
+  margin-bottom: 2rem;
+}
+
+.card-text{
+  margin-bottom: 0;
 }
