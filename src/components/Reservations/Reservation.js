@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchRooms } from '../../redux/rooms/rooms';
 
 const Reservantion = () => {
   const [startDate, setStartDate] = useState(new Date());
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchRooms());
+  }, []);
+
+  const rooms = useSelector((state) => state);
+
+  console.log(rooms);
 
   return (
     <>
@@ -13,10 +24,10 @@ const Reservantion = () => {
         className="reservations-container"
         style={{
           backgroundImage: `linear-gradient(
-        325deg,
-        rgba(87, 111, 1, 0.777) 0%,
-        rgba(150, 191, 2, 0.93) 100%
-        ),url(${('https://images.squarespace-cdn.com/content/v1/5e72c8bfe21ad940ba788673/1621016255763-WDHM79J11KCDQW4DIKFX/airbnb-short-term-versus-long-term-rentals-thumbnail.jpg')})`,
+          325deg,
+          rgba(87, 111, 1, 0.777) 0%,
+          rgba(150, 191, 2, 0.93) 100%
+          ),url(${('https://images.squarespace-cdn.com/content/v1/5e72c8bfe21ad940ba788673/1621016255763-WDHM79J11KCDQW4DIKFX/airbnb-short-term-versus-long-term-rentals-thumbnail.jpg')})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
@@ -37,9 +48,7 @@ const Reservantion = () => {
               <Dropdown.Divider />
               <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
             </DropdownButton>
-
             <button type="submit" className="book-btn">Book now</button>
-
           </div>
 
         </div>
