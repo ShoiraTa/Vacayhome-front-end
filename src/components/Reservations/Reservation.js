@@ -50,8 +50,6 @@ const Reservantion = () => {
     dispatch(postReservations(postData));
   };
 
-  console.log('here', roomId, 0);
-
   return (
     <>
       <div

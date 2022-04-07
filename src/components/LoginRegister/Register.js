@@ -30,7 +30,6 @@ function Register() {
   };
 
   const users = useSelector((state) => state.usersReducer);
-  console.log(users);
   return (
     <Container fluid>
       <Container className="login-card col-4 pb-5 bg-white border rounded">
