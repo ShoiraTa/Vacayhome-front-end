@@ -4,6 +4,10 @@ body {
   margin: 0;
 }
 
+.App {
+  overflow: hidden;
+}
+
 .carousel {
   position: absolute;
   left: 0;
@@ -40,6 +44,10 @@ body {
   background: none;
 }
 
+.bottom-text {
+  font-size: 0.8rem;
+}
+
 /* Homepage carousel */
 
 .react-multi-carousel-item {
@@ -58,8 +66,15 @@ body {
   border-radius: 10px;
 }
 
-.homepage-container {
+.homepage-container,
+.nav-panel,
+.content-panel {
   height: 100vh;
+  max-height: 100vh;
+}
+
+.content-panel {
+  overflow-y: scroll;
 }
 
 .homepage-header-container {

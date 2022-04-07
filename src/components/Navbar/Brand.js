@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
+import { Navbar } from 'react-bootstrap';
 import Logo from '../../assets/images/VacayHomeLeaf.png';
 
 function Brand() {
   return (
-    <Navbar.Brand href="/" className="d-flex w-100 mt-3 p-1">
+    <Navbar.Brand href="/" className="d-flex">
       <img
         alt="Logo"
         src={Logo}
@@ -13,7 +13,7 @@ function Brand() {
         className="d-inline-block align-top"
       />
       {' '}
-      <span className="logo-text d-flex align-items-center text-dark">VacayHome</span>
+      <span className="logo-text d-flex align-items-end text-dark pe-2">VacayHome</span>
     </Navbar.Brand>
   );
 }

@@ -8,9 +8,7 @@ import Card from 'react-bootstrap/Card';
 import { fetchReservations } from '../../redux/reservations/reservation';
 import { fetchRooms } from '../../redux/rooms/rooms';
 import SingleReservation from './SingleReservation';
-import Brand from '../Navbar/Brand';
 import SideBar from '../Navbar/SideBar';
-import Social from '../Navbar/Social';
 import { deleteReservation } from '../../redux/reservations/deleteReservation';
 
 const UserReservations = () => {
@@ -37,12 +35,10 @@ const UserReservations = () => {
     <>
       <Container fluid>
         <Row className="homepage-container bg-white">
-          <Col sm={2} md={2} lg={2} className="d-flex flex-column justify-content-between bg-light px-0">
-            <Brand />
+          <Col md={2} lg={2} className="nav-panel d-flex flex-column justify-content-between bg-light px-0">
             <SideBar />
-            <Social />
           </Col>
-          <Col sm={10} md={10} lg={10}>
+          <Col md={10} lg={10} className="content-panel">
             <h1 className="text-center m-4">Reservations</h1>
             <div className="reservations-container">
               {
