@@ -18,7 +18,7 @@ const Detail = (props) => {
             <div className="details-text-container">
               <div>
                 <h3>{name}</h3>
-                <p className="description mb-4">{description}</p>
+                <p className="description my-4">{description}</p>
                 <div>
                   <p className="description">
                     This vacation home is located in
