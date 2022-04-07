@@ -62,6 +62,7 @@ const Reservantion = () => {
           ),url(${(image)})`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
+          height: '100vh',
         }}
       >
         <div className="reservation-header-links">
