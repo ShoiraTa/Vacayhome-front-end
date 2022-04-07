@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 /* .flex {
   display: flex;
   flex-wrap: wrap;
@@ -7,15 +8,46 @@
   width: 50%;
 } */
 
+.details-container {
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 900;
+  text-align: right;
+}
+
+.details-container h3 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.details-container a {
+  font-size: 28px;
+}
+
+.description {
+  text-transform: none;
+}
+
 .react-multi-carousel-list {
   display: grid;
 }
 
-.details-container {
-  /* height: 100vh; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.reserve-btn {
+  height: 2.7rem;
+  background-color: #97BF0F;
+  border: 2px solid #97BF0F;
+  width: 10rem;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+  border-radius: 4%;
+}
+
+.images {
+  height: 27rem;
 }
 
 .details-text-container {
@@ -24,7 +56,9 @@
  }
 
 .flex-direction {
+  display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   /* height: 100vh;
   display: flex; */
   /* flex-direction: column;

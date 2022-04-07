@@ -10,7 +10,7 @@ const Detail = (props) => {
   return (
     <>
       <div className="details-container">
-        <Card className="flex-direction">
+        <div className="flex-direction">
           <div>
             <img className="images" src={imageUrl} alt="Tropical houses" />
           </div>
@@ -18,9 +18,9 @@ const Detail = (props) => {
             <div className="details-text-container">
               <div>
                 <h3>{name}</h3>
-                <p>{description}</p>
+                <p className="description mb-4">{description}</p>
                 <div>
-                  <p>
+                  <p className="description">
                     This vacation home is located in
                     {' '}
                     {address}
@@ -29,7 +29,7 @@ const Detail = (props) => {
   &nbsp;
                     {country}
                   </p>
-                  <p>
+                  <p className="description">
                     For the price of
                     {' '}
                     $
@@ -37,17 +37,17 @@ const Detail = (props) => {
                   </p>
                 </div>
                 <div>
-                  <button type="button">Reserve</button>
+                  <button variant="success" className="btn-success reserve-btn mt-4" size="lg" type="button">Reserve</button>
                 </div>
                 <div>
                   <a href="/">
-                    <BiArrowBack />
+                    <BiArrowBack className="mt-4" />
                   </a>
                 </div>
               </div>
             </div>
           </Card.Body>
-        </Card>
+        </div>
       </div>
     </>
   );
