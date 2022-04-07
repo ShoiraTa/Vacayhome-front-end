@@ -11,7 +11,6 @@ import { postReservations } from '../../redux/reservations/reservation';
 const Reservantion = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [title, setTitle] = useState('Location');
-  // const [titleAccomodation, setTitleAccomodation] = useState('Select Accom');
 
   const dispatch = useDispatch();
   useEffect(() => {
