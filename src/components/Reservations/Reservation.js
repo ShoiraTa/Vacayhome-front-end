@@ -4,7 +4,8 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 import { fetchRooms } from '../../redux/rooms/rooms';
 import { postReservations } from '../../redux/reservations/reservation';
 
@@ -65,6 +66,9 @@ const Reservantion = () => {
           backgroundSize: 'cover',
         }}
       >
+        <div className="reservation-header-links">
+          <Link to="/"><FaArrowLeft style={{ color: '#fff', fontSize: '1.2rem', margin: '5px' }} /></Link>
+        </div>
         <div className="reservations-description">
           <div className="reservations-header">
             <h1>Book the place</h1>
@@ -74,7 +78,20 @@ const Reservantion = () => {
           </p>
           {
            parseInt(houseid, 10) === 0 && (
-           <select onChange={(e) => setroomId(e.target.value)} align="end" value="Select" id="dropdown-menu-align-end">
+           <select
+             onChange={(e) => setroomId(e.target.value)}
+             align="end"
+             style={{
+               outline: 'none',
+               width: '95%',
+               borderRadius: '2px',
+             }}
+             placeholder="Choose a House you want to reserve."
+             id="dropdown-menu-align-end"
+           >
+             <option disabled selected>
+               Choose a House you want to reserve
+             </option>
              { rooms.roomsReducer.map((room) => (
                <option key={room.id} value={room.id}>
                  {room.name}
@@ -90,7 +107,8 @@ const Reservantion = () => {
             </DropdownButton>
             <button type="submit" onClick={createReservation} className="book-btn">Book now</button>
           </div>
-          { reservationPost.status === 201 && <p>Reservation was successful!</p>}
+          { reservationPost.status === 201
+            && <p>Reservation was successful!</p>}
         </div>
       </div>
     </>

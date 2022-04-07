@@ -57,8 +57,10 @@ const UserReservations = () => {
                           reservation={reservation}
                           key={reservation.id}
                         />
-                        <button type="submit" variant="primary" className="btn btn-success">See the reservation</button>
-                        <button type="submit" variant="primary" onClick={(e) => handleDelete(e, reservation.id)} className="btn btn-danger">Delete the reservation</button>
+                        <div className="d-flex justify-content-end">
+                          <button type="submit" variant="primary" onClick={(e) => handleDelete(e, reservation.id)} className="btn btn-danger">Delete the reservation</button>
+                        </div>
+
                       </Card.Body>
                     </Card>
                   </div>
