@@ -108,17 +108,16 @@ p {
   display: contents;
 }
 
-.reservation-header-links{
+.reservation-header-links {
   width: 100vw;
   color: #fff;
   margin-top: 1rem;
   margin-left: 2rem;
 }
 
-.reservation-header-links a{ 
+.reservation-header-links a {
   color: #fff;
 }
-
 
 .reservation {
   width: 80%;
@@ -265,7 +264,6 @@ p {
   margin-bottom: 0;
 }
 
-
-.mr-1{
+.mr-1 {
   margin-right: 1rem;
 }
