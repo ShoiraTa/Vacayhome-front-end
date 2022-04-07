@@ -1,12 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-/* .flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.images {
-  width: 50%;
-} */
 
 .details-container {
   display: flex;
@@ -75,14 +67,36 @@
 }
 
 @media screen
-and (min-device-width: 768px) 
+and (min-device-width: 575px) 
 and (max-device-width: 1024px) {
   .images {
     height: 20rem;
     width: 17rem;
+    height: 18rem;
   }
 
   .description:nth-child(odd) {
-    height: 4rem;
+    height: 5rem;
+  }
+}
+
+@media screen
+and (min-device-width: 375px) 
+and (max-device-width: 574px) {
+  .flex-direction {
+    flex-direction: column;
+  }
+
+  .details-container {
+    text-align: left;
+  }
+
+  .images {
+    height: 18rem;
+  }
+
+  .description:nth-child(odd) {
+    height: 5rem;
+    padding: 0 0.5rem;
   }
 }
