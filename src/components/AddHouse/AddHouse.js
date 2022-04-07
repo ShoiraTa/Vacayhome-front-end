@@ -12,7 +12,7 @@ function AddHouse() {
             <SideBar />
           </Col>
           <Col md={10} lg={10} className="content-panel">
-            <h1 className="text-center m-4">Add Listing</h1>
+            <h1 className="text-center m-4">Create Listing</h1>
             <Container>
               <AddHouseForm />
             </Container>
