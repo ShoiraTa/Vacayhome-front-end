@@ -42,8 +42,8 @@
 
 .reserve-btn {
   height: 2.7rem;
-  background-color: #97BF0F;
-  border: 2px solid #97BF0F;
+  background-color: #97bf0f;
+  border: 2px solid #97bf0f;
   width: 10rem;
   font-weight: 700;
   font-size: 18px;
@@ -58,7 +58,7 @@
 .details-text-container {
   width: 100%;
   display: contents;
- }
+}
 
 .flex-direction {
   display: flex;
@@ -67,12 +67,11 @@
 }
 
 @media screen
-and (min-device-width: 575px) 
-and (max-device-width: 1024px) {
+  and (min-device-width: 575px)
+  and (max-device-width: 1024px) {
   .images {
     height: 20rem;
     width: 17rem;
-    height: 18rem;
   }
 
   .description:nth-child(odd) {
@@ -81,8 +80,8 @@ and (max-device-width: 1024px) {
 }
 
 @media screen
-and (min-device-width: 375px) 
-and (max-device-width: 574px) {
+  and (min-device-width: 375px)
+  and (max-device-width: 574px) {
   .flex-direction {
     flex-direction: column;
   }
