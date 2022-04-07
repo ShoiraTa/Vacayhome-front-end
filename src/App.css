@@ -242,11 +242,17 @@ p {
   .card-body {
     padding-left: 1rem;
   }
+
+  .details-container,
+  .details-container .flex-direction img {
+    width: 100%;
+  }
 }
 
 .details-container {
-  width: 90%;
+  width: 95%;
   height: 100vh;
   display: flex;
   align-items: center;
+  margin: auto;
 }
