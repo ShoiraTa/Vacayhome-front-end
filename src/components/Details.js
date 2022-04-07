@@ -1,6 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable camelcase */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import '../details.css';

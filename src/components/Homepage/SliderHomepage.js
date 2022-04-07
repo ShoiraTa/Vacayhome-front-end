@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Carousel from 'react-multi-carousel';
@@ -30,8 +28,6 @@ function Slider() {
   const houseObj = useSelector((state) => state.roomsReducer);
   const dispatch = useDispatch();
   const handleSelected = (e) => {
-    // e.preventDefault();
-    console.log(e);
     setSelectedHouse(e);
   };
   useEffect(() => {
@@ -58,6 +54,9 @@ function Slider() {
           <div
             className="carousel-img-container"
             key={house.id}
+            role="link"
+            tabIndex="0"
+            onKeyDown={() => null}
             onClick={() => handleSelected(house)}
           >
             <img
