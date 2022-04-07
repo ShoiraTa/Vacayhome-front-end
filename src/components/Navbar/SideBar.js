@@ -13,7 +13,7 @@ function SideBar() {
       <ListGroup.Item action href="#link3" variant="success">
         BOOKINGS
       </ListGroup.Item>
-      <ListGroup.Item action href="#link4" variant="success">
+      <ListGroup.Item action href="/new_house" variant="success">
         ADD LISTING
       </ListGroup.Item>
     </ListGroup>

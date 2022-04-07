@@ -10,7 +10,7 @@ function Hamburger() {
           <Nav.Link href="/">LISTINGS</Nav.Link>
           <Nav.Link href="/">PLACES</Nav.Link>
           <Nav.Link href="/">BOOKINGS</Nav.Link>
-          <Nav.Link href="/">ADD LISTING</Nav.Link>
+          <Nav.Link href="/new_house">ADD LISTING</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </>
