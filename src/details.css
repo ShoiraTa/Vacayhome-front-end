@@ -1,8 +1,32 @@
-.flex {
+/* .flex {
   display: flex;
   flex-wrap: wrap;
 }
 
 .images {
   width: 50%;
+} */
+
+.react-multi-carousel-list {
+  display: grid;
+}
+
+.details-container {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details-text-container {
+  width: 100%;
+  display: contents;
+ }
+
+.flex-direction {
+  flex-direction: row;
+  /* height: 100vh;
+  display: flex; */
+  /* flex-direction: column;
+  align-items: center; */
 }
