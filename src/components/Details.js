@@ -4,13 +4,13 @@ import '../details.css';
 
 const Detail = (props) => {
   const {
-    image_url, name, description, price, address, city, country,
+    image_url: imageUrl, name, description, price, address, city, country,
   } = props.props;
   return (
     <>
       <div className="flex">
         <div>
-          <img className="images" src={image_url} alt="Tropical houses" />
+          <img className="images" src={imageUrl} alt="Tropical houses" />
         </div>
         <div>
           <h3>{name}</h3>
