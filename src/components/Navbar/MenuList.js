@@ -6,7 +6,7 @@ function MenuList() {
   const { userid } = useParams();
   return (
     <ListGroup defaultActiveKey="/" variant="flush" className="d-none d-md-block">
-      <ListGroup.Item action href="/" variant="success">
+      <ListGroup.Item action href={`/${userid}`} variant="success">
         LISTINGS
       </ListGroup.Item>
       <ListGroup.Item action href={`/${userid}/0/reservation`} variant="success">
