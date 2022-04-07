@@ -40,6 +40,10 @@ body {
   background: none;
 }
 
+.bottom-text {
+  font-size: 0.8rem;
+}
+
 /* Homepage carousel */
 
 .react-multi-carousel-item {
