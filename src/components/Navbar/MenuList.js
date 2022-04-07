@@ -13,7 +13,7 @@ function MenuList() {
       <ListGroup.Item action href="/1/reservations" variant="success">
         MY RESERVATIONS
       </ListGroup.Item>
-      <ListGroup.Item action href="#link4" variant="success">
+      <ListGroup.Item action href="/new_house" variant="success">
         ADD LISTING
       </ListGroup.Item>
       <ListGroup.Item action href="#link4" variant="success">
