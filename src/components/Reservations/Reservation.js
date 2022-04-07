@@ -77,7 +77,7 @@ const Reservantion = () => {
            <select onChange={(e) => setroomId(e.target.value)} align="end" value="Select" id="dropdown-menu-align-end">
              { rooms.roomsReducer.map((room) => (
                <option key={room.id} value={room.id}>
-                 {room.address}
+                 {room.name}
                </option>
              ))}
            </select>

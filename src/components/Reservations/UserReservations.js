@@ -61,8 +61,8 @@ const UserReservations = () => {
                           reservation={reservation}
                           key={reservation.id}
                         />
-                        <button type="submit" variant="primary" className="btn btn-success">See the accommodation</button>
-                        <button type="submit" variant="primary" onClick={(e) => handleDelete(e, reservation.id)} className="btn btn-danger">Delete the accomodation</button>
+                        <button type="submit" variant="primary" className="btn btn-success">See the reservation</button>
+                        <button type="submit" variant="primary" onClick={(e) => handleDelete(e, reservation.id)} className="btn btn-danger">Delete the reservation</button>
                       </Card.Body>
                     </Card>
                   </div>
