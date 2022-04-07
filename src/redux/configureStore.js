@@ -4,10 +4,12 @@ import {
 import thunk from 'redux-thunk';
 import roomsReducer from './rooms/rooms';
 import reservationsReducer from './reservations/reservation';
+import deleteReservationReducer from './reservations/deleteReservation';
 
 const reducer = combineReducers({
   roomsReducer,
   reservationsReducer,
+  deleteReservationReducer,
 });
 
 const store = createStore(
