@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
 import SideBar from '../Navbar/SideBar';
 import AddHouseForm from './AddHouseForm';
+import Response from './Response';
 
 function AddHouse() {
+  const houses = useSelector((state) => state.roomsReducer);
+  const [show, setShow] = useState(true);
+
   return (
     <>
       <Container fluid>
@@ -14,7 +19,13 @@ function AddHouse() {
           <Col md={10} lg={10} className="content-panel">
             <h1 className="text-center m-4">Create Listing</h1>
             <Container>
-              <AddHouseForm />
+              {
+              houses.status === 201 ? (
+                <Response show={show} setShow={setShow} />
+              ) : (
+                <AddHouseForm />
+              )
+            }
             </Container>
           </Col>
         </Row>
