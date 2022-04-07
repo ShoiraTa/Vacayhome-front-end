@@ -19,6 +19,7 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "no-shadow": "off",
+    "react/destructuring-assignment": "off",
     "react/prop-types": "off"
   },
   "ignorePatterns": [
