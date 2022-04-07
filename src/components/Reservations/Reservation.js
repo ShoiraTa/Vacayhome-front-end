@@ -4,7 +4,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-const Reservantion = () => {
+const Reservation = () => {
   const [startDate, setStartDate] = useState(new Date());
 
   return (
@@ -48,4 +48,4 @@ const Reservantion = () => {
   );
 };
 
-export default Reservantion;
+export default Reservation;
