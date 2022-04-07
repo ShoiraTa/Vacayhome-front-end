@@ -12,20 +12,19 @@ function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [userEmail, setEmail] = useState('');
-  const [userid, setUserid] = useState(0);
 
   useEffect(() => {
     dispatch(fetchUsers());
   }, []);
   const users = useSelector((state) => state.usersReducer);
 
+  console.log(users);
   const handleLogin = () => {
-    console.log(userEmail);
     users.map((user) => {
       if (user.email === userEmail) {
-        navigate(`/${userid}`);
+        navigate(`/${user.id}`);
       }
-      return setUserid(null);
+      return 'hey';
     });
   };
 

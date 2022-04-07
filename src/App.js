@@ -12,7 +12,7 @@ function App() {
   return (
     <main className="App">
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path=":userid/" element={<Home />} />
         <Route exact path=":userid/:houseid/details" element={<Detail />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
