@@ -69,9 +69,11 @@ const Detail = () => {
                         </p>
                       </div>
                       <div>
-                        <button variant="success" className="btn-success reserve-btn mt-4" size="lg" type="button">
-                          <Link to={`/${userid}/${houseid}/reservation`} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>Reserve</Link>
-                        </button>
+                        <Link to={`/${userid}/${houseid}/reservation`} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>
+                          <button variant="success" className="btn-success reserve-btn mt-4" size="lg" type="button">
+                            Reserve
+                          </button>
+                        </Link>
                       </div>
                       <div>
                         <a href={`/${userid}/`}>
