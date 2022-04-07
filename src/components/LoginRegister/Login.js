@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import { useSelector, useDispatch } from 'react-redux';
 import Slider from './Slider';
 import Logo from '../../assets/images/VacayHome.png';
+import { fetchUsers } from '../../redux/users/usersReducer';
 
 function Login() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, []);
+
+  const users = useSelector((state) => state.usersReducer);
+  console.log(users);
 
   return (
     <Container fluid>

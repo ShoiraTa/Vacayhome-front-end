@@ -23,7 +23,7 @@ export const fetchUsers = () => (dispatch) => {
 };
 
 export const postUsers = (data) => (dispatch) => {
-  axios.post('https://vacayhome-api.herokuapp.com/api/v1/bookings', data)
+  axios.post('https://vacayhome-api.herokuapp.com/api/v1/users', data)
     .then((response) => {
       dispatch({ type: POST_USERS, payload: response });
     });

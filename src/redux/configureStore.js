@@ -11,7 +11,7 @@ const reducer = combineReducers({
   roomsReducer,
   reservationsReducer,
   deleteReservationReducer,
-  usersReducer
+  usersReducer,
 });
 
 const store = createStore(
