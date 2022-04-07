@@ -1,25 +1,22 @@
 import React from 'react';
-import ListGroup from 'react-bootstrap/ListGroup';
+import { Navbar, Container } from 'react-bootstrap';
+import Brand from './Brand';
+import Hamburger from './Hamburger';
+import MenuList from './MenuList';
+import Social from './Social';
 
 function SideBar() {
   return (
-    <ListGroup defaultActiveKey="/" variant="flush" className="d-none d-md-block">
-      <ListGroup.Item action href="/" variant="success">
-        LISTINGS
-      </ListGroup.Item>
-      <ListGroup.Item action href="/1/0/reservation" variant="success">
-        ADD RESERVATION
-      </ListGroup.Item>
-      <ListGroup.Item action href="/1/reservations" variant="success">
-        MY RESERVATIONS
-      </ListGroup.Item>
-      <ListGroup.Item action href="#link4" variant="success">
-        ADD LISTING
-      </ListGroup.Item>
-      <ListGroup.Item action href="#link4" variant="success">
-        DELETE LISTING
-      </ListGroup.Item>
-    </ListGroup>
+    <>
+      <Navbar collapseOnSelect expand="sm" bg="light">
+        <Container className="d-flex justify-content-between p-1 pe-2">
+          <Brand />
+          <Hamburger />
+        </Container>
+      </Navbar>
+      <MenuList />
+      <Social />
+    </>
   );
 }
 

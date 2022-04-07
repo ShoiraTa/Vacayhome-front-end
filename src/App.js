@@ -9,7 +9,7 @@ import UserReservations from './components/Reservations/UserReservations';
 
 function App() {
   return (
-    <>
+    <main className="App">
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="login" element={<Login />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path=":userid/:houseid/reservation" element={<Reservantion />} />
         <Route path=":userid/reservations" element={<UserReservations />} />
       </Routes>
-    </>
+    </main>
   );
 }
 
