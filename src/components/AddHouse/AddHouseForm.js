@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Form, Button } from 'react-bootstrap';
+import { Form, Button, InputGroup } from 'react-bootstrap';
 import { Country, State, City } from 'country-state-city';
 import { postRooms } from '../../redux/rooms/rooms';
 
@@ -59,6 +59,27 @@ function AddHouseForm() {
         onChange={(e) => setPrice(e.target.value)}
         required
       />
+
+      <InputGroup className="w-50 mb-3">
+        <Form.Control
+          type="number"
+          placeholder="Guests allowed"
+          className="rounded"
+          required
+        />
+        <Form.Control
+          type="number"
+          placeholder="Bedrooms"
+          className="mx-2 rounded"
+          required
+        />
+        <Form.Control
+          type="number"
+          placeholder="Beds"
+          className="rounded"
+          required
+        />
+      </InputGroup>
 
       <Form.Control
         as="textarea"
