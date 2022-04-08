@@ -1,27 +1,27 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate, Link, useParams } from 'react-router-dom';
-import { deleteRoom, fetchRooms } from '../redux/rooms/rooms';
+import { Link, useParams } from 'react-router-dom';
+import { fetchRooms } from '../redux/rooms/rooms';
+import { deleteRoom } from '../redux/rooms/roomsDeleteReducer';
 
 function RemoveHouse() {
+  const [roomId, setroomId] = useState();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const { userid } = useParams();
+
+  const handleDelete = () => {
+    dispatch(deleteRoom(roomId));
+    dispatch(fetchRooms());
+  };
 
   useEffect(() => {
     dispatch(fetchRooms());
   }, []);
 
   const roomList = useSelector((state) => state.roomsReducer);
-
-  const handleDelete = (e) => {
-    e.preventDefault();
-    const HouseId = e.target.selectDropdown.value;
-    console.log(HouseId);
-    dispatch(deleteRoom(HouseId));
-    navigate(`/${userid}/`);
-  };
+  const deleteRoomState = useSelector((state) => state.deleteRoomsReducer);
 
   return (
     <div
@@ -61,20 +61,20 @@ function RemoveHouse() {
             borderRadius: '2px',
             margin: '2rem 0',
           }}
+          onChange={(e) => setroomId(e.target.value)}
           placeholder="Choose a House you want to reserve."
           id="selectDropdown"
         >
           <option disabled selected>
             Choose a House you want to delete
           </option>
-          { roomList.map((room) => (
+          { roomList != null && roomList.map((room) => (
             <option key={room.id} value={room.id}>
-
               {room.name}
             </option>
           ))}
         </select>
-        <button className="submit book-btn" type="submit">Submit</button>
+        <Link to={`/${userid}/`} onClick={() => { handleDelete(); }} className="submit book-btn" type="submit">Submit</Link>
       </form>
 
     </div>

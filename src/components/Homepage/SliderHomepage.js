@@ -23,16 +23,20 @@ function Slider() {
       slidesToSlide: 1, // optional, default to 1.
     },
   };
-
-  const [selectedHouse, setSelectedHouse] = useState();
-  const houseObj = useSelector((state) => state.roomsReducer);
   const dispatch = useDispatch();
-  const handleSelected = (e) => {
-    setSelectedHouse(e);
-  };
   useEffect(() => {
     dispatch(fetchRooms());
   }, []);
+
+  const [selectedHouse, setSelectedHouse] = useState();
+  const houseObj = useSelector((state) => state.roomsReducer);
+
+  console.log('houseObj', houseObj);
+
+  const handleSelected = (e) => {
+    setSelectedHouse(e);
+  };
+
   return (
     <Carousel
       arrows

@@ -12,8 +12,8 @@ const deleteReservationReducer = (state = initialState, action) => {
   }
 };
 
-export const deleteReservation = (id) => (dispatch) => {
-  axios.delete(`https://vacayhome-api.herokuapp.com/api/v1/bookings/${id}`)
+export const deleteReservation = (id) => async (dispatch) => {
+  await axios.delete(`https://vacayhome-api.herokuapp.com/api/v1/bookings/${id}`)
     .then((response) => {
       dispatch({ type: DELETE_RESERVATION, payload: response });
     });
