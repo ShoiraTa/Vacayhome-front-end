@@ -64,16 +64,8 @@ function AddHouseForm() {
         as="textarea"
         rows={3}
         placeholder="Description"
-        className="mb-3"
+        className="w-50 mb-3"
         onChange={(e) => setDescription(e.target.value)}
-        required
-      />
-
-      <Form.Control
-        type="url"
-        placeholder="Image url"
-        className="mb-3"
-        onChange={(e) => setImage(e.target.value)}
         required
       />
 
@@ -147,6 +139,14 @@ function AddHouseForm() {
         placeholder="Street address"
         className="w-75 mb-3"
         onChange={(e) => setAddress(e.target.value)}
+        required
+      />
+
+      <Form.Control
+        type="url"
+        placeholder="Image url"
+        className="w-75 mb-3"
+        onChange={(e) => setImage(e.target.value)}
         required
       />
 
