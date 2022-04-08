@@ -35,6 +35,7 @@ function RemoveHouse() {
           )`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
+        gap: '2rem',
       }}
     >
 
@@ -42,7 +43,15 @@ function RemoveHouse() {
         <Link to={`/${userid}/`}><FaArrowLeft style={{ color: '#fff', fontSize: '1.2rem', margin: '5px' }} /></Link>
       </div>
 
-      <form className="form" onSubmit={handleDelete}>
+      <form
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          flexDirection: 'column',
+        }}
+        className="form"
+        onSubmit={handleDelete}
+      >
         <h1>Remove a House from our Listing</h1>
 
         <select
@@ -51,6 +60,7 @@ function RemoveHouse() {
             outline: 'none',
             width: '95%',
             borderRadius: '2px',
+            margin: '2rem 0',
           }}
           placeholder="Choose a House you want to reserve."
           id="selectDropdown"
