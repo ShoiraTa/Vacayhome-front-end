@@ -20,8 +20,7 @@ function RemoveHouse() {
     const HouseId = e.target.selectDropdown.value;
     console.log(HouseId);
     dispatch(deleteRoom(HouseId));
-    navigate(`/${userid}/delete`);
-    window.location.reload(false);
+    navigate(`/${userid}/`);
   };
 
   return (
