@@ -1,19 +1,20 @@
 import { useEffect, useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { fetchRooms } from '../redux/rooms/rooms';
 import { deleteRoom } from '../redux/rooms/roomsDeleteReducer';
 
 function RemoveHouse() {
   const [roomId, setroomId] = useState();
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
   const { userid } = useParams();
+  const navigate = useNavigate();
 
   const handleDelete = () => {
     dispatch(deleteRoom(roomId));
     dispatch(fetchRooms());
+    navigate(`/${userid}/`);
   };
 
   useEffect(() => {
@@ -21,7 +22,6 @@ function RemoveHouse() {
   }, []);
 
   const roomList = useSelector((state) => state.roomsReducer);
-  const deleteRoomState = useSelector((state) => state.deleteRoomsReducer);
 
   return (
     <div
@@ -74,7 +74,7 @@ function RemoveHouse() {
             </option>
           ))}
         </select>
-        <Link to={`/${userid}/`} onClick={() => { handleDelete(); }} className="submit book-btn" type="submit">Submit</Link>
+        <button to={`/${userid}/`} onClick={() => { handleDelete(); }} className="submit book-btn" type="submit">Submit</button>
       </form>
 
     </div>
