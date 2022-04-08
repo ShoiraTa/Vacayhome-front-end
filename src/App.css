@@ -8,6 +8,10 @@ body {
   overflow: hidden;
 }
 
+.bg-green {
+  background: #97bf02;
+}
+
 .carousel {
   position: absolute;
   left: 0;
@@ -37,6 +41,17 @@ body {
   font-family: 'Great Vibes', cursive;
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.nav-item {
+  background: #f8f9fa;
+  font-weight: 500;
+  color: #41464b;
+}
+
+.nav-item.active {
+  background: #97bf02;
+  border: none;
 }
 
 .access-btn {
