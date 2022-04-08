@@ -18,7 +18,7 @@ function MenuList() {
       <ListGroup.Item action href="#link4" variant="success">
         ADD LISTING
       </ListGroup.Item>
-      <ListGroup.Item action href="#link4" variant="success">
+      <ListGroup.Item action href={`/${userid}/delete`} variant="success">
         DELETE LISTING
       </ListGroup.Item>
     </ListGroup>
