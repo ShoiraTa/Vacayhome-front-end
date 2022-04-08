@@ -204,6 +204,21 @@ p {
   color: #97bf02;
 }
 
+#selectDropdown{
+  color: #fff;
+  background: #97bf02;
+  border: 2px solid #c4dd78;
+  padding: 10px;
+  width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  box-shadow: none;
+}
+
 .dropdown-menu-end {
   width: 100%;
   border: none;
@@ -232,7 +247,7 @@ p {
     margin-bottom: 1.5rem;
   }
 
-  #dropdown-menu-align-end {
+  #dropdown-menu-align-end, #selectDropdown {
     width: 100%;
   }
 

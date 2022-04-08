@@ -72,7 +72,7 @@ const Reservantion = () => {
             <h1>Book the place</h1>
           </div>
           <p>
-            When the user clicks the Delete item link in the navigation panel they
+            Pick a House to Reserve!
           </p>
           {
            parseInt(houseid, 10) === 0 && (
