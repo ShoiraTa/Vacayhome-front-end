@@ -24,6 +24,7 @@ function RemoveHouse() {
   const roomList = useSelector((state) => state.roomsReducer);
 
   return (
+
     <div
       className="reservations-container"
       style={{
@@ -34,12 +35,18 @@ function RemoveHouse() {
           )`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
-        gap: '2rem',
+        padding: '2rem',
       }}
     >
 
-      <div className="reservation-header-links">
-        <Link to={`/${userid}/`}><FaArrowLeft style={{ color: '#fff', fontSize: '1.2rem', margin: '5px' }} /></Link>
+      <div
+        className="reservation-header-links"
+        style={{
+          position: 'fixed',
+          top: '0',
+        }}
+      >
+        <Link to={`/${userid}/`}><FaArrowLeft style={{ color: '#fff', fontSize: '2rem', margin: '5px' }} /></Link>
       </div>
 
       <form
@@ -66,7 +73,7 @@ function RemoveHouse() {
           id="selectDropdown"
         >
           <option disabled selected>
-            Choose a House you want to delete
+            Choose a House
           </option>
           { roomList != null && roomList.map((room) => (
             <option key={room.id} value={room.id}>

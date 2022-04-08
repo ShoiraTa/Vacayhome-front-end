@@ -31,8 +31,6 @@ function Slider() {
   const [selectedHouse, setSelectedHouse] = useState();
   const houseObj = useSelector((state) => state.roomsReducer);
 
-  console.log('houseObj', houseObj);
-
   const handleSelected = (e) => {
     setSelectedHouse(e);
   };
