@@ -204,7 +204,7 @@ p {
   color: #97bf02;
 }
 
-#selectDropdown{
+#selectDropdown {
   color: #fff;
   background: #97bf02;
   border: 2px solid #c4dd78;
@@ -212,7 +212,6 @@ p {
   width: 200px;
   height: 60px;
   border-radius: 30px;
-  border: 2px solid #fff;
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 1.1rem;
@@ -247,7 +246,8 @@ p {
     margin-bottom: 1.5rem;
   }
 
-  #dropdown-menu-align-end, #selectDropdown {
+  #dropdown-menu-align-end,
+  #selectDropdown {
     width: 100%;
   }
 
