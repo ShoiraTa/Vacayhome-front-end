@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router';
 import { fetchRooms } from '../../redux/rooms/rooms';
 
 function Slider() {
@@ -10,27 +11,26 @@ function Slider() {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
-      slidesToSlide: 3, // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
     },
     tablet: {
-      breakpoint: { max: 1024, min: 454 },
+      breakpoint: { max: 1024, min: 767 },
       items: 2,
-      slidesToSlide: 2, // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
     },
     mobile: {
-      breakpoint: { max: 375, min: 0 },
+      breakpoint: { max: 765, min: 0 },
       items: 1,
       slidesToSlide: 1, // optional, default to 1.
     },
   };
-
-  // const [selectedHouse, setSelectedHouse] = useState();
   const houseObj = useSelector((state) => state.roomsReducer);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { userid } = useParams();
 
   const handleSelected = (id) => {
-    navigate(`/${id}/details`);
+    navigate(`/${userid}/${id}/details`);
   };
 
   useEffect(() => {

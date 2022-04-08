@@ -15,7 +15,7 @@ const SingleReservation = ({ reservation, rooms }) => (
             <img alt="room" src={`${room.image_url}`} style={{ width: '200px', margin: '1rem 0' }} />
           </div>
           <div className="card-desc">
-            <Card.Title>Special title treatment</Card.Title>
+            <Card.Title>{room.name}</Card.Title>
             <Card.Text>
               <strong>City</strong>
               :

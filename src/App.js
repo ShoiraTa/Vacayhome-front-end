@@ -10,16 +10,16 @@ import UserReservations from './components/Reservations/UserReservations';
 
 function App() {
   return (
-    <>
+    <main className="App">
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path=":houseid/details" element={<Detail />} />
+        <Route exact path=":userid/" element={<Home />} />
+        <Route exact path=":userid/:houseid/details" element={<Detail />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path=":userid/:houseid/reservation" element={<Reservantion />} />
         <Route path=":userid/reservations" element={<UserReservations />} />
       </Routes>
-    </>
+    </main>
   );
 }
 

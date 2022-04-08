@@ -3,14 +3,12 @@ import { BiArrowBack } from 'react-icons/bi';
 import Card from 'react-bootstrap/Card';
 import '../details.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { fetchRooms } from '../redux/rooms/rooms';
-import Brand from './Navbar/Brand';
 import SideBar from './Navbar/SideBar';
-import Social from './Navbar/Social';
 
 const Detail = () => {
   const dispatch = useDispatch();
@@ -21,6 +19,7 @@ const Detail = () => {
   const rooms = useSelector((state) => state.roomsReducer);
 
   const { houseid } = useParams();
+  const { userid } = useParams();
 
   let house = {};
 
@@ -39,9 +38,7 @@ const Detail = () => {
       <Container fluid>
         <Row className="homepage-container bg-white">
           <Col sm={2} md={2} lg={2} className="d-flex flex-column justify-content-between bg-light px-0">
-            <Brand />
             <SideBar />
-            <Social />
           </Col>
           <Col sm={10} md={10} lg={10}>
             <div className="details-container">
@@ -72,11 +69,14 @@ const Detail = () => {
                         </p>
                       </div>
                       <div>
-
-                        <button variant="success" className="btn-success reserve-btn mt-4" size="lg" type="button">Reserve</button>
+                        <Link to={`/${userid}/${houseid}/reservation`} style={{ color: '#fff', fontSize: '18px', textDecoration: 'none' }}>
+                          <button variant="success" className="btn-success reserve-btn mt-4" size="lg" type="button">
+                            Reserve
+                          </button>
+                        </Link>
                       </div>
                       <div>
-                        <a href="/">
+                        <a href={`/${userid}/`}>
                           <BiArrowBack className="mt-4" />
                         </a>
                       </div>
