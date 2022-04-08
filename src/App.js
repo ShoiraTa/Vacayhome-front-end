@@ -17,12 +17,12 @@ function App() {
         <Route path="/*" element={<Home />}>
           <Route path="" element={<Homepage />} />
           <Route path="new_listing" element={<AddHouse />} />
+          <Route path=":houseid/details" element={<Detail />} />
+          <Route path=":userid/reservations" element={<UserReservations />} />
         </Route>
-        <Route path="/details" element={<Detail />} />
-        <Route path="/:userid/:houseid/reservation" element={<Reservation />} />
-        <Route path="/:userid/reservations" element={<UserReservations />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path=":userid/:houseid/reservation" element={<Reservation />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
       </Routes>
     </main>
   );

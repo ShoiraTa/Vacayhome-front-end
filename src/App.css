@@ -62,18 +62,12 @@ body {
 
 .carousel-img-container img {
   height: 100%;
-  width: 80%;
+  width: 100%;
   border-radius: 10px;
 }
 
-.homepage-container,
-.nav-panel,
 .content-panel {
   height: 100vh;
-  max-height: 100vh;
-}
-
-.content-panel {
   overflow-y: scroll;
 }
 
@@ -251,4 +245,23 @@ p {
 
 .card-text {
   margin-bottom: 0;
+}
+
+@media screen and (min-device-width: 375px) and (max-device-width: 574px) {
+  .card-body {
+    padding-left: 1rem;
+  }
+
+  .details-container,
+  .details-container .flex-direction img {
+    width: 100%;
+  }
+}
+
+.details-container {
+  width: 95%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: auto;
 }
