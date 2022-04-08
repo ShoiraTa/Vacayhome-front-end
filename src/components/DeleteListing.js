@@ -70,8 +70,7 @@ function RemoveHouse() {
           </option>
           { roomList.map((room) => (
             <option key={room.id} value={room.id}>
-              {room.id}
-              :
+         
               {room.name}
             </option>
           ))}
