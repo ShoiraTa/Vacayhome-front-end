@@ -151,7 +151,7 @@ function AddHouseForm() {
       />
 
       <div className="text-center mb-5">
-        <Button variant="success" type="submit">
+        <Button variant="success" className="theme-btn rounded" type="submit">
           Add Listing
         </Button>
       </div>

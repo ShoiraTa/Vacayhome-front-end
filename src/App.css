@@ -59,6 +59,15 @@ body {
   background: none;
 }
 
+.theme-btn {
+  height: 2.7rem;
+  background-color: #97bf0f;
+  border: 1px solid #97bf0f;
+  width: 10rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 .bottom-text {
   font-size: 0.8rem;
 }
