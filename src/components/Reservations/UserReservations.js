@@ -57,7 +57,7 @@ const UserReservations = () => {
                           reservation={reservation}
                           key={reservation.id}
                         />
-                        <div className="cancel-reservation-btn">
+                        <div className="d-flex justify-content-end">
                           <button type="submit" variant="primary" onClick={(e) => handleDelete(e, reservation.id)} className="btn btn-danger">Cancel the reservation</button>
                         </div>
 

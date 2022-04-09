@@ -6,7 +6,7 @@ function MenuList() {
   const { userid } = useParams();
   return (
     <ListGroup defaultActiveKey="/" variant="flush" className="d-none d-md-block">
-      <ListGroup.Item action href={`/${userid}`} variant="success">
+      <ListGroup.Item action href="/" variant="success">
         LISTINGS
       </ListGroup.Item>
       <ListGroup.Item action href={`/${userid}/0/reservation`} variant="success">
@@ -18,7 +18,7 @@ function MenuList() {
       <ListGroup.Item action href="#link4" variant="success">
         ADD LISTING
       </ListGroup.Item>
-      <ListGroup.Item action href="#link4" variant="success">
+      <ListGroup.Item action href={`/${userid}/delete`} variant="success">
         DELETE LISTING
       </ListGroup.Item>
     </ListGroup>
