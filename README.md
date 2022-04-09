@@ -44,6 +44,12 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@AdamChang3](https://twitter.com/AdamChang3) 
 - LinkedIn: [You-Wei(Adam) Chang](https://www.linkedin.com/in/adamteddychang/)
 
+👤 **Simo Nkosi**
+
+- GitHub: [@KDlamini](https://github.com/KDlamini)
+- Twitter: [@RealSimoNkosi](https://twitter.com/RealSimoNkosi)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/simo-nkosi-418523180/)
+
 
 ## 🤝 Contributing
 
