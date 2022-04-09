@@ -11,7 +11,7 @@ function SideBar({ isLoggedIn }) {
       <Navbar collapseOnSelect expand="sm" bg="light">
         <Container className="d-flex justify-content-between p-1 pe-2">
           <Brand />
-          <Hamburger />
+          <Hamburger isLoggedIn={isLoggedIn} />
         </Container>
       </Navbar>
       <MenuList isLoggedIn={isLoggedIn} />

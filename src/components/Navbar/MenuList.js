@@ -7,8 +7,6 @@ function MenuList({ isLoggedIn }) {
   const userId = localStorage.getItem('userId');
   const paths = MenuAuth(isLoggedIn, userId);
 
-  console.log(userId);
-
   return (
     <ListGroup variant="flush" className="d-none d-md-block">
       <ListGroup.Item action as={NavLink} to={paths.home} className="nav-item">

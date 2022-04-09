@@ -16,8 +16,6 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn'));
   const paths = Auth(isLoggedIn);
 
-  console.log(paths);
-
   return (
     <main className="App">
       <Routes>
