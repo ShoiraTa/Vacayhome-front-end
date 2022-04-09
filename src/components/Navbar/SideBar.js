@@ -5,7 +5,7 @@ import Hamburger from './Hamburger';
 import MenuList from './MenuList';
 import Social from './Social';
 
-function SideBar() {
+function SideBar({ isLoggedIn }) {
   return (
     <>
       <Navbar collapseOnSelect expand="sm" bg="light">
@@ -14,7 +14,7 @@ function SideBar() {
           <Hamburger />
         </Container>
       </Navbar>
-      <MenuList />
+      <MenuList isLoggedIn={isLoggedIn} />
       <Social />
     </>
   );

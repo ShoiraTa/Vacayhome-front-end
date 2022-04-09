@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Homepage/Home';
@@ -10,21 +10,33 @@ import Reservation from './components/Reservations/Reservation';
 import UserReservations from './components/Reservations/UserReservations';
 import AddHouse from './components/AddHouse/AddHouse';
 import RemoveHouse from './components/DeleteListing';
+import Auth from './components/LoginRegister/Auth';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn'));
+  const paths = Auth(isLoggedIn);
+
+  console.log(isLoggedIn);
+
   return (
     <main className="App">
       <Routes>
-        <Route path="/*" element={<Home />}>
-          <Route path=":userid" element={<Homepage />} />
-          <Route path=":userid/:houseid/details" element={<Detail />} />
-          <Route path="new_listing" element={<AddHouse />} />
-          <Route path=":userid/reservations" element={<UserReservations />} />
+        <Route path="/*" element={<Home isLoggedIn={isLoggedIn} />}>
+          <Route path={paths.home} element={<Homepage />} />
+          <Route path={paths.details} element={<Detail />} />
+          <Route path={paths.addHouse} element={<AddHouse />} />
+          <Route path={paths.userReservations} element={<UserReservations />} />
         </Route>
-        <Route path=":userid/:houseid/reservation" element={<Reservation />} />
-        <Route path=":userid/delete" element={<RemoveHouse />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
+        <Route
+          path={paths.reservation}
+          element={isLoggedIn ? <Reservation /> : <Login setIsLoggedIn={setIsLoggedIn} />}
+        />
+        <Route
+          path={paths.deleteHouse}
+          element={isLoggedIn ? <RemoveHouse /> : <Login setIsLoggedIn={setIsLoggedIn} />}
+        />
+        <Route path={paths.login} element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path={paths.register} element={<Register />} />
       </Routes>
     </main>
   );

@@ -8,7 +8,7 @@ import Slider from './Slider';
 import Logo from '../../assets/images/VacayHome.png';
 import { fetchUsers } from '../../redux/users/usersReducer';
 
-function Login() {
+function Login({ setIsLoggedIn }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [userEmail, setEmail] = useState('');
@@ -21,6 +21,8 @@ function Login() {
   const handleLogin = () => {
     users.map((user) => {
       if (user.email === userEmail) {
+        localStorage.setItem('isLoggedIn', 'true');
+        setIsLoggedIn('true');
         navigate(`/${user.id}`);
       }
       return 'hey';
