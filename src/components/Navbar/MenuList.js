@@ -1,12 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useParams } from 'react-router';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { MenuAuth } from '../LoginRegister/Auth';
 
 function MenuList({ isLoggedIn }) {
-  const { userId } = useParams();
+  const userId = localStorage.getItem('userId');
   const paths = MenuAuth(isLoggedIn, userId);
+
+  console.log(userId);
 
   return (
     <ListGroup variant="flush" className="d-none d-md-block">

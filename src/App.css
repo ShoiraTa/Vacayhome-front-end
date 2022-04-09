@@ -68,6 +68,14 @@ body {
   text-transform: uppercase;
 }
 
+.logout-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
 .bottom-text {
   font-size: 0.8rem;
 }

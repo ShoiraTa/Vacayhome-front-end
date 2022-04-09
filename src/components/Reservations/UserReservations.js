@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import { fetchReservations } from '../../redux/reservations/reservation';
 import { fetchRooms } from '../../redux/rooms/rooms';
@@ -25,7 +24,7 @@ const UserReservations = () => {
   const rooms = useSelector((state) => state.roomsReducer);
   const reservations = useSelector((state) => state.reservationsReducer);
 
-  const { userid } = useParams();
+  const { userid } = localStorage.getItem('userId');
 
   return (
     <>

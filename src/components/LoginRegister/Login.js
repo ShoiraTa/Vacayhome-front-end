@@ -22,6 +22,7 @@ function Login({ setIsLoggedIn }) {
     users.map((user) => {
       if (user.email === userEmail) {
         localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('userId', `${user.id}`);
         setIsLoggedIn('true');
         navigate(`/${user.id}`);
       }

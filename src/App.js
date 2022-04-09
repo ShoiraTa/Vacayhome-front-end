@@ -16,16 +16,19 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn'));
   const paths = Auth(isLoggedIn);
 
-  console.log(isLoggedIn);
+  console.log(paths);
 
   return (
     <main className="App">
       <Routes>
         <Route path="/*" element={<Home isLoggedIn={isLoggedIn} />}>
-          <Route path={paths.home} element={<Homepage />} />
+          <Route exact path={paths.home} element={<Homepage isLoggedIn={isLoggedIn} />} />
           <Route path={paths.details} element={<Detail />} />
           <Route path={paths.addHouse} element={<AddHouse />} />
-          <Route path={paths.userReservations} element={<UserReservations />} />
+          <Route
+            path={paths.userReservations}
+            element={<UserReservations isLoggedIn={isLoggedIn} />}
+          />
         </Route>
         <Route
           path={paths.reservation}

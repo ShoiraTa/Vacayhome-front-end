@@ -22,7 +22,7 @@ const Reservation = () => {
   const reservationPost = useSelector((state) => state.reservationsReducer);
 
   const { houseid } = useParams();
-  const { userid } = useParams();
+  const userid = localStorage.getItem('userId');
 
   const [roomId, setroomId] = useState(houseid);
 
@@ -65,7 +65,7 @@ const Reservation = () => {
         }}
       >
         <div className="reservation-header-links">
-          <Link to={`/${userid}/`}><FaArrowLeft style={{ color: '#fff', fontSize: '1.2rem', margin: '5px' }} /></Link>
+          <Link to={`/${userid}`}><FaArrowLeft style={{ color: '#fff', fontSize: '1.2rem', margin: '5px' }} /></Link>
         </div>
         <div className="reservations-description">
           <div className="reservations-header">
