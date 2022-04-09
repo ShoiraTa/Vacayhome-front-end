@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { useNavigate } from 'react-router-dom';
+import Detail from '../Details';
 import { fetchRooms } from '../../redux/rooms/rooms';
 
 function Slider() {
@@ -18,24 +18,23 @@ function Slider() {
       slidesToSlide: 2, // optional, default to 1.
     },
     mobile: {
-      breakpoint: { max: 375, min: 0 },
+      breakpoint: { max: 464, min: 0 },
       items: 1,
       slidesToSlide: 1, // optional, default to 1.
     },
   };
-
-  // const [selectedHouse, setSelectedHouse] = useState();
-  const houseObj = useSelector((state) => state.roomsReducer);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const handleSelected = (id) => {
-    navigate(`/${id}/details`);
-  };
-
   useEffect(() => {
     dispatch(fetchRooms());
   }, []);
+
+  const [selectedHouse, setSelectedHouse] = useState();
+  const houseObj = useSelector((state) => state.roomsReducer);
+
+  const handleSelected = (e) => {
+    setSelectedHouse(e);
+  };
+
   return (
     <Carousel
       arrows
@@ -52,7 +51,7 @@ function Slider() {
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px"
     >
-      { houseObj.map((house) => (
+      {!selectedHouse ? houseObj.map((house) => (
         <>
           <div
             className="carousel-img-container"
@@ -60,7 +59,7 @@ function Slider() {
             role="link"
             tabIndex="0"
             onKeyDown={() => null}
-            onClick={() => handleSelected(house.id)}
+            onClick={() => handleSelected(house)}
           >
             <img
               src={house.image_url}
@@ -77,7 +76,8 @@ function Slider() {
             </div>
           </div>
         </>
-      ))}
+      ))
+        : <Detail props={selectedHouse} />}
     </Carousel>
   );
 }

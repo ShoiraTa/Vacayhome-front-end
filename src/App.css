@@ -86,7 +86,7 @@ body {
 
 .carousel-img-container img {
   height: 100%;
-  width: 100%;
+  width: 80%;
   border-radius: 10px;
 }
 
@@ -124,6 +124,17 @@ p {
 .reservation-container {
   width: 100%;
   display: contents;
+}
+
+.reservation-header-links {
+  width: 100vw;
+  color: #fff;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.reservation-header-links a {
+  color: #fff;
 }
 
 .reservation {
@@ -211,6 +222,20 @@ p {
   color: #97bf02;
 }
 
+#selectDropdown {
+  color: #fff;
+  background: #97bf02;
+  border: 2px solid #c4dd78;
+  padding: 10px;
+  width: 200px;
+  height: 60px;
+  border-radius: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  box-shadow: none;
+}
+
 .dropdown-menu-end {
   width: 100%;
   border: none;
@@ -239,7 +264,8 @@ p {
     margin-bottom: 1.5rem;
   }
 
-  #dropdown-menu-align-end {
+  #dropdown-menu-align-end,
+  #selectDropdown {
     width: 100%;
   }
 
@@ -271,21 +297,6 @@ p {
   margin-bottom: 0;
 }
 
-@media screen and (min-device-width: 375px) and (max-device-width: 574px) {
-  .card-body {
-    padding-left: 1rem;
-  }
-
-  .details-container,
-  .details-container .flex-direction img {
-    width: 100%;
-  }
-}
-
-.details-container {
-  width: 95%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  margin: auto;
+.mr-1 {
+  margin-right: 1rem;
 }

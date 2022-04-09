@@ -6,15 +6,14 @@ const DELETE_RESERVATION = 'reservations/DELETE_RESERVATION';
 const deleteReservationReducer = (state = initialState, action) => {
   switch (action.type) {
     case DELETE_RESERVATION:
-      console.log('deleted');
       return action.payload;
     default:
       return state;
   }
 };
 
-export const deleteReservation = (id) => (dispatch) => {
-  axios.delete(`https://vacayhome-api.herokuapp.com/api/v1/bookings/${id}`)
+export const deleteReservation = (id) => async (dispatch) => {
+  await axios.delete(`https://vacayhome-api.herokuapp.com/api/v1/bookings/${id}`)
     .then((response) => {
       dispatch({ type: DELETE_RESERVATION, payload: response });
     });

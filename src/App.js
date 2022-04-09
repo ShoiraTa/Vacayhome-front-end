@@ -9,18 +9,20 @@ import Register from './components/LoginRegister/Register';
 import Reservation from './components/Reservations/Reservation';
 import UserReservations from './components/Reservations/UserReservations';
 import AddHouse from './components/AddHouse/AddHouse';
+import RemoveHouse from './components/DeleteListing';
 
 function App() {
   return (
     <main className="App">
       <Routes>
         <Route path="/*" element={<Home />}>
-          <Route path="" element={<Homepage />} />
+          <Route path=":userid" element={<Homepage />} />
+          <Route path=":userid/:houseid/details" element={<Detail />} />
           <Route path="new_listing" element={<AddHouse />} />
-          <Route path=":houseid/details" element={<Detail />} />
           <Route path=":userid/reservations" element={<UserReservations />} />
         </Route>
         <Route path=":userid/:houseid/reservation" element={<Reservation />} />
+        <Route path=":userid/delete" element={<RemoveHouse />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
       </Routes>

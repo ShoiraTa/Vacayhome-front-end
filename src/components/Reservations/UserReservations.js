@@ -32,30 +32,30 @@ const UserReservations = () => {
       <h1 className="text-center m-4">Reservations</h1>
       <div className="reservations-container">
         {
-        reservations.map((reservation) => (
-          reservation.user_id === parseInt(userid, 10)
-          && (
-            <div key={reservation.id} className="reservation">
-              <Card>
-                <Card.Header as="h5">
-                  Reservation #
-                  {reservation.id}
-                </Card.Header>
-                <Card.Body>
-                  <SingleReservation
-                    rooms={rooms}
-                    reservation={reservation}
-                    key={reservation.id}
-                  />
-                  <button type="submit" variant="primary" className="btn btn-success">See the accommodation</button>
-                  <button type="submit" variant="primary" onClick={(e) => handleDelete(e, reservation.id)} className="btn btn-danger">Delete the accomodation</button>
-                </Card.Body>
-              </Card>
-            </div>
-
-          )
-        ))
-      }
+          reservations.map((reservation) => (
+            reservation.user_id === parseInt(userid, 10)
+            && (
+              <div key={reservation.id} className="reservation">
+                <Card>
+                  <Card.Header as="h5">
+                    Reservation #
+                    {reservation.id}
+                  </Card.Header>
+                  <Card.Body>
+                    <SingleReservation
+                      rooms={rooms}
+                      reservation={reservation}
+                      key={reservation.id}
+                    />
+                    <div className="d-flex justify-content-end">
+                      <button type="submit" variant="primary" onClick={(e) => handleDelete(e, reservation.id)} className="btn btn-danger">Cancel the reservation</button>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </div>
+            )
+          ))
+        }
       </div>
     </>
   );
