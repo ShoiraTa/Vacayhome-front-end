@@ -7,6 +7,7 @@ import Login from './components/LoginRegister/Login';
 import Register from './components/LoginRegister/Register';
 import Reservantion from './components/Reservations/Reservation';
 import UserReservations from './components/Reservations/UserReservations';
+import RemoveHouse from './components/DeleteListing';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path=":userid/:houseid/reservation" element={<Reservantion />} />
         <Route path=":userid/reservations" element={<UserReservations />} />
+        <Route path=":userid/delete" element={<RemoveHouse />} />
       </Routes>
     </main>
   );

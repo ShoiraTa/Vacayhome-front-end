@@ -15,15 +15,15 @@ const roomsReducer = (state = initialState, action) => {
   }
 };
 
-export const fetchRooms = () => (dispatch) => {
-  axios.get('https://vacayhome-api.herokuapp.com/api/v1/houses')
+export const fetchRooms = () => async (dispatch) => {
+  await axios.get('https://vacayhome-api.herokuapp.com/api/v1/houses')
     .then((response) => {
       dispatch({ type: FETCH_DATA, payload: response.data });
     });
 };
 
-export const postRooms = (data) => (dispatch) => {
-  axios.post('https://vacayhome-api.herokuapp.com/api/v1/houses', data)
+export const postRooms = (data) => async (dispatch) => {
+  await axios.post('https://vacayhome-api.herokuapp.com/api/v1/houses', data)
     .then((response) => {
       dispatch({ type: POST_DATA, payload: response });
     });

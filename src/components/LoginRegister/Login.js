@@ -18,7 +18,6 @@ function Login() {
   }, []);
   const users = useSelector((state) => state.usersReducer);
 
-  console.log(users);
   const handleLogin = () => {
     users.map((user) => {
       if (user.email === userEmail) {
