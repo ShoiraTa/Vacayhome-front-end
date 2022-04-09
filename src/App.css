@@ -8,6 +8,10 @@ body {
   overflow: hidden;
 }
 
+.bg-green {
+  background: #97bf02;
+}
+
 .carousel {
   position: absolute;
   left: 0;
@@ -39,9 +43,37 @@ body {
   font-weight: 600;
 }
 
+.nav-item {
+  background: #f8f9fa;
+  font-weight: 500;
+  color: #41464b;
+}
+
+.nav-item.active {
+  background: #97bf02;
+  border: none;
+}
+
 .access-btn {
   border: none;
   background: none;
+}
+
+.theme-btn {
+  height: 2.7rem;
+  background-color: #97bf0f;
+  border: 1px solid #97bf0f;
+  width: 10rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.logout-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .bottom-text {
@@ -66,14 +98,8 @@ body {
   border-radius: 10px;
 }
 
-.homepage-container,
-.nav-panel,
 .content-panel {
   height: 100vh;
-  max-height: 100vh;
-}
-
-.content-panel {
   overflow-y: scroll;
 }
 

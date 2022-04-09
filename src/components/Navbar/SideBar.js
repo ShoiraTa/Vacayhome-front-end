@@ -5,16 +5,16 @@ import Hamburger from './Hamburger';
 import MenuList from './MenuList';
 import Social from './Social';
 
-function SideBar() {
+function SideBar({ isLoggedIn }) {
   return (
     <>
       <Navbar collapseOnSelect expand="sm" bg="light">
         <Container className="d-flex justify-content-between p-1 pe-2">
           <Brand />
-          <Hamburger />
+          <Hamburger isLoggedIn={isLoggedIn} />
         </Container>
       </Navbar>
-      <MenuList />
+      <MenuList isLoggedIn={isLoggedIn} />
       <Social />
     </>
   );

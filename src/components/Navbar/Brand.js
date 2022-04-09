@@ -4,7 +4,10 @@ import Logo from '../../assets/images/VacayHomeLeaf.png';
 
 function Brand() {
   return (
-    <Navbar.Brand href="/" className="d-flex">
+    <Navbar.Brand
+      href="/"
+      className="d-flex flex-md-column flex-lg-row align-items-md-center align-items-lg-end"
+    >
       <img
         alt="Logo"
         src={Logo}

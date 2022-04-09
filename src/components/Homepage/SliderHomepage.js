@@ -67,9 +67,10 @@ function Slider() {
             />
 
             <div className="carousel-description">
-              <span>3&nbsp;  guests1&nbsp;  bedroom2&nbsp;  beds1&nbsp;  bath</span>
+              <span>3 guests&nbsp; 1 bedroom&nbsp; 2 beds&nbsp; 1 bath</span>
               <p>
                 <strong>{house.name}</strong>
+                {' '}
                 {house.description}
               </p>
             </div>
