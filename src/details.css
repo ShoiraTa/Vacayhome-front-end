@@ -76,3 +76,32 @@
     height: 5rem;
   }
 }
+
+@media screen
+  and (min-device-width: 375px)
+  and (max-device-width: 574px) {
+  .flex-direction {
+    flex-direction: column;
+  }
+
+  .details-container {
+    text-align: left;
+  }
+
+  .images {
+    height: 18rem;
+  }
+
+  .description:nth-child(odd) {
+    height: 5rem;
+  }
+
+  .react-multi-carousel-item {
+    margin: 0;
+  }
+
+  .card-body {
+    padding-left: 0;
+  }
+}
+
