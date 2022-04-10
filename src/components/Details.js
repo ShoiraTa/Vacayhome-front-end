@@ -2,6 +2,7 @@ import React from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import '../details.css';
 
+const userid = localStorage.getItem('userId');
 const Detail = (props) => {
   const {
     image_url: imageUrl, name, description, price, address, city, country,
@@ -37,7 +38,7 @@ const Detail = (props) => {
           <button type="button">Reserve</button>
         </div>
         <div>
-          <a href="/">
+          <a href={`/${userid}`}>
             <BiArrowBack />
           </a>
         </div>
