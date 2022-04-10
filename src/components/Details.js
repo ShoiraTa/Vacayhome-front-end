@@ -16,34 +16,36 @@ const Detail = (props) => {
             <img className="images" src={imageUrl} alt="Tropical houses" />
           </div>
           <Card.Body>
-            <div>
-              <h3>{name}</h3>
-              <p>{description}</p>
-            </div>
-            <div>
-              <p>
-                This vacation home is located in
-                {' '}
-                {address}
-  &nbsp;
-                {city}
-  &nbsp;
-                {country}
-              </p>
-              <p>
-                For the price of
-                {' '}
-                $
-                {price}
-              </p>
-            </div>
-            <div>
-              <button type="button">Reserve</button>
-            </div>
-            <div>
-              <a href={`/${userid}`}>
-                <BiArrowBack />
-              </a>
+            <div className="details-text-container">
+              <div>
+                <h3>{name}</h3>
+                <p className="description my-4">{description}</p>
+                <div>
+                  <p className="description">
+                    This vacation home is located in
+                    {' '}
+                    {address}
+    &nbsp;
+                    {city}
+    &nbsp;
+                    {country}
+                  </p>
+                  <p className="description">
+                    For the price of
+                    {' '}
+                    $
+                    {price}
+                  </p>
+                </div>
+                <div>
+                  <button variant="success" className="btn-success reserve-btn mt-4" size="lg" type="button">Reserve</button>
+                </div>
+                <div>
+                  <a href={`/${userid}`}>
+                    <BiArrowBack className="mt-4" />
+                  </a>
+                </div>
+              </div>
             </div>
           </Card.Body>
         </div>
