@@ -20,3 +20,35 @@
 .description {
   text-transform: none;
 }
+
+.description:nth-child(odd) {
+  background-color: #f0f0f0;
+  height: 3rem;
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.description:nth-child(even) {
+  background-color: #fff;
+}
+
+.react-multi-carousel-list {
+  display: grid;
+}
+
+.reserve-btn {
+  height: 2.7rem;
+  background-color: #97bf0f;
+  border: 2px solid #97bf0f;
+  width: 10rem;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 2px;
+  border-radius: 4%;
+}
+
+.images {
+  height: 27rem;
+}
