@@ -1,8 +1,22 @@
-.flex {
+.details-container {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 900;
+  text-align: right;
 }
 
-.images {
-  width: 50%;
+.details-container h3 {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.details-container a {
+  font-size: 28px;
+}
+
+.description {
+  text-transform: none;
 }
