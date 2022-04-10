@@ -1,7 +1,17 @@
 import React from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import '../details.css';
-import Card from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { fetchRooms } from '../redux/rooms/rooms';
+import Brand from './Navbar/Brand';
+import SideBar from './Navbar/SideBar';
+import Social from './Navbar/Social';
+
 
 const userid = localStorage.getItem('userId');
 const Detail = (props) => {

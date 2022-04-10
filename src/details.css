@@ -1,10 +1,8 @@
 .details-container {
   display: flex;
   justify-content: center;
-  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   color: black;
-  font-weight: 900;
   text-align: right;
 }
 
