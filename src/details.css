@@ -52,3 +52,27 @@
 .images {
   height: 27rem;
 }
+
+.details-text-container {
+  width: 100%;
+  display: contents;
+}
+
+.flex-direction {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+@media screen
+  and (min-device-width: 575px)
+  and (max-device-width: 1024px) {
+  .images {
+    height: 20rem;
+    width: 17rem;
+  }
+
+  .description:nth-child(odd) {
+    height: 5rem;
+  }
+}
