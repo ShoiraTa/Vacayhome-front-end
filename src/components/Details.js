@@ -4,13 +4,14 @@ import '../details.css';
 import Card from 'react-bootstrap/Card';
 import { useParams, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
+import { MenuAuth } from './LoginRegister/Auth';
 
-const Detail = (props) => {
+const Detail = ({ house, isLoggedIn }) => {
   const { user_id: userId } = useParams();
-
   const {
     image_url: imageUrl, name, description, price, address, city, country, id,
-  } = props.props;
+  } = house;
+  const paths = MenuAuth(isLoggedIn, userId, id);
 
   return (
     <Container>
@@ -44,7 +45,7 @@ const Detail = (props) => {
                   </p>
                 </div>
                 <div>
-                  <Link to={`/${userId}/${id}/reservation`}>
+                  <Link to={paths.reservation}>
                     <button variant="success" className="btn-success theme-btn mt-4 rounded" size="lg" type="button">Reserve</button>
                   </Link>
                 </div>

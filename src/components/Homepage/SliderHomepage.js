@@ -5,7 +5,7 @@ import 'react-multi-carousel/lib/styles.css';
 import Detail from '../Details';
 import { fetchRooms } from '../../redux/rooms/rooms';
 
-function Slider() {
+function Slider({ isLoggedIn }) {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -34,8 +34,6 @@ function Slider() {
   const handleSelected = (e) => {
     setSelectedHouse(e);
   };
-
-  console.log(selectedHouse);
 
   return (
     <>
@@ -84,7 +82,7 @@ function Slider() {
             }
           </Carousel>
         ) : (
-          <Detail props={selectedHouse} />
+          <Detail house={selectedHouse} isLoggedIn={isLoggedIn} />
         )
       }
     </>
