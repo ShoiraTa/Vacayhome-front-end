@@ -19,18 +19,22 @@ const UserReservations = () => {
   useEffect(() => {
     dispatch(fetchRooms());
     dispatch(fetchReservations());
-  }, [handleDelete]);
+  }, []);
 
   const rooms = useSelector((state) => state.roomsReducer);
-  const reservations = useSelector((state) => state.reservationsReducer);
+  const reservationsall = useSelector((state) => state.reservationsReducer);
+  const { reservations } = reservationsall;
   let userid = localStorage.getItem('userId');
+
+  console.log(reservations);
+
   userid = parseInt(userid, 10);
   return (
     <>
       <h1 className="text-center m-4">Reservations</h1>
       <div className="reservations-container">
         {
-         reservations && reservations.map((reservation) => (
+         reservations[0] && reservations[0].map((reservation) => (
            reservation.user_id === parseInt(userid, 10)
             && (
               <div key={reservation.id} className="reservation">
