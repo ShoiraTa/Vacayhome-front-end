@@ -8,25 +8,28 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { fetchRooms } from '../redux/rooms/rooms';
 
-const userid = localStorage.getItem('userId');
 const Detail = (props) => {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchRooms());
   }, []);
-  const rooms = useSelector((state) => state.roomsReducer);
-  const { houseid } = useParams();
 
+  const rooms = useSelector((state) => state.roomsReducer);
+  const { user_id: userId, house_id: houseId } = useParams();
   let house = {};
+
   rooms.map((element) => {
-    if (element.id === houseid) {
+    if (element.id === houseId) {
       house = element;
     }
     return house;
   });
+
   const {
     image_url: imageUrl, name, description, price, address, city, country, id,
   } = props.props;
+
   return (
     <>
       <Container fluid>
@@ -61,12 +64,12 @@ const Detail = (props) => {
                       </p>
                     </div>
                     <div>
-                      <Link to={`/${userid}/${id}/reservation`}>
+                      <Link to={`/${userId}/${id}/reservation`}>
                         <button variant="success" className="btn-success theme-btn mt-4 rounded" size="lg" type="button">Reserve</button>
                       </Link>
                     </div>
                     <div>
-                      <a href={`/${userid}`}>
+                      <a href={`/${userId}`}>
                         <BiArrowBack className="mt-4" />
                       </a>
                     </div>
