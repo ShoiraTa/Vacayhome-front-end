@@ -32,7 +32,6 @@ const UserReservations = () => {
     dispatch(fetchReservations());
   }, [deletedRes]);
 
-  console.log(deletedRes);
   const { reservations } = reservationsall;
 
   return (
