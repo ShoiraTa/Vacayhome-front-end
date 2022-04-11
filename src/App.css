@@ -199,7 +199,7 @@ p {
   box-shadow: none;
 }
 
-.react-datepicker-wrapper {
+.reservations-buttons .react-datepicker-wrapper {
   width: 200px !important;
   display: flex !important;
   align-items: center;
