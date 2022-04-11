@@ -34,21 +34,23 @@ const Detail = (props) => {
           <div className="details-container">
             <div className="flex-direction">
               <div>
-                <img className="images" src={imageUrl} alt="Tropical houses" />
+                <img className="thumbnail images rounded" src={imageUrl} alt="vacation house" />
               </div>
               <Card.Body>
                 <div className="details-text-container">
                   <div>
-                    <h3>{name}</h3>
+                    <h3 className="text-dark">{name}</h3>
                     <p className="description my-4">{description}</p>
                     <div>
                       <p className="description">
                         This vacation home is located in
                         {' '}
                         {address}
-    &nbsp;
+                        ,
+                        &nbsp;
                         {city}
-    &nbsp;
+                        ,
+                        &nbsp;
                         {country}
                       </p>
                       <p className="description">
@@ -60,7 +62,7 @@ const Detail = (props) => {
                     </div>
                     <div>
                       <Link to={`/${userid}/${id}/reservation`}>
-                        <button variant="success" className="btn-success reserve-btn mt-4" size="lg" type="button">Reserve</button>
+                        <button variant="success" className="btn-success theme-btn mt-4 rounded" size="lg" type="button">Reserve</button>
                       </Link>
                     </div>
                     <div>

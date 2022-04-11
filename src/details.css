@@ -21,7 +21,7 @@
 
 .description:nth-child(odd) {
   background-color: #f0f0f0;
-  height: 3rem;
+  height: auto;
   padding: 0 0.5rem;
   display: flex;
   justify-content: center;
