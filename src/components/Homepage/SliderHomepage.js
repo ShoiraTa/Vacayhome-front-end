@@ -35,50 +35,59 @@ function Slider() {
     setSelectedHouse(e);
   };
 
-  return (
-    <Carousel
-      arrows
-      renderButtonGroupOutside
-      swipeable
-      draggable={false}
-      responsive={responsive}
-      infinite
-      autoPlaySpeed={8000}
-      keyBoardControl
-      customTransition="all .5"
-      transitionDuration={500}
-      containerClass="carousel-container"
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
-    >
-      {!selectedHouse ? houseObj.map((house) => (
-        <>
-          <div
-            className="carousel-img-container"
-            key={house.id}
-            role="link"
-            tabIndex="0"
-            onKeyDown={() => null}
-            onClick={() => handleSelected(house)}
-          >
-            <img
-              src={house.image_url}
-              alt="travel vacation"
-            />
+  console.log(selectedHouse);
 
-            <div className="carousel-description">
-              <span>3 guests&nbsp; 1 bedroom&nbsp; 2 beds&nbsp; 1 bath</span>
-              <p>
-                <strong>{house.name}</strong>
-                {' '}
-                {house.description}
-              </p>
-            </div>
-          </div>
-        </>
-      ))
-        : <Detail props={selectedHouse} />}
-    </Carousel>
+  return (
+    <>
+      {
+        !selectedHouse ? (
+          <Carousel
+            arrows
+            renderButtonGroupOutside
+            swipeable
+            draggable={false}
+            responsive={responsive}
+            infinite
+            autoPlaySpeed={8000}
+            keyBoardControl
+            customTransition="all .5"
+            transitionDuration={500}
+            containerClass="carousel-container"
+            dotListClass="custom-dot-list-style"
+            itemClass="carousel-item-padding-40-px"
+          >
+            {
+              houseObj.map((house) => (
+                <div
+                  className="carousel-img-container"
+                  key={house.id}
+                  role="link"
+                  tabIndex="0"
+                  onKeyDown={() => null}
+                  onClick={() => handleSelected(house)}
+                >
+                  <img
+                    src={house.image_url}
+                    alt="travel vacation"
+                  />
+
+                  <div className="carousel-description">
+                    <span>3 guests&nbsp; 1 bedroom&nbsp; 2 beds&nbsp; 1 bath</span>
+                    <p>
+                      <strong>{house.name}</strong>
+                      {' '}
+                      {house.description}
+                    </p>
+                  </div>
+                </div>
+              ))
+            }
+          </Carousel>
+        ) : (
+          <Detail props={selectedHouse} />
+        )
+      }
+    </>
   );
 }
 

@@ -48,7 +48,7 @@
 }
 
 .images {
-  height: 27rem;
+  height: 26rem;
 }
 
 .details-text-container {
@@ -84,10 +84,12 @@
 
   .details-container {
     text-align: left;
+    width: 100vw;
   }
 
   .images {
     height: 18rem;
+    width: auto;
   }
 
   .description:nth-child(odd) {
