@@ -23,16 +23,15 @@ const UserReservations = () => {
 
   const rooms = useSelector((state) => state.roomsReducer);
   const reservations = useSelector((state) => state.reservationsReducer);
-
-  const { userid } = localStorage.getItem('userId');
-
+  let userid = localStorage.getItem('userId');
+  userid = parseInt(userid, 10);
   return (
     <>
       <h1 className="text-center m-4">Reservations</h1>
       <div className="reservations-container">
         {
-          reservations.map((reservation) => (
-            reservation.user_id === parseInt(userid, 10)
+         reservations && reservations.map((reservation) => (
+           reservation.user_id === parseInt(userid, 10)
             && (
               <div key={reservation.id} className="reservation">
                 <Card>
@@ -53,7 +52,7 @@ const UserReservations = () => {
                 </Card>
               </div>
             )
-          ))
+         ))
         }
       </div>
     </>

@@ -41,8 +41,8 @@ const Reservation = () => {
     const postData = {
       booking:
       {
-        user_id: userid,
-        house_id: roomId,
+        user_id: parseInt(userid, 10),
+        house_id: parseInt(roomId, 10),
         date: startDate.toLocaleDateString(),
       },
     };
