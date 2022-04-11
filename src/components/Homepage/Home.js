@@ -1,26 +1,20 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
+import { Outlet } from 'react-router';
+import { Container } from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import SliderHomepage from './SliderHomepage';
 import SideBar from '../Navbar/SideBar';
 
-function Home() {
+function Home({ isLoggedIn }) {
   return (
     <>
       <Container fluid>
         <Row className="homepage-container bg-white">
           <Col md={2} lg={2} className="nav-panel d-flex flex-column justify-content-between bg-light px-0">
-            <SideBar />
+            <SideBar isLoggedIn={isLoggedIn} />
           </Col>
-          <Col md={10} lg={10}>
-            <div className="homepage-header-container">
-              <h1>Top-rated vacation rentals</h1>
-              <p>Find and book unique accommodations</p>
-            </div>
-            <div>
-              <SliderHomepage />
-            </div>
+          <Col md={10} lg={10} className="content-panel">
+            <Outlet />
           </Col>
         </Row>
       </Container>

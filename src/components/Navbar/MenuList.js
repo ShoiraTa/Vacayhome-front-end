@@ -1,24 +1,27 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { useParams } from 'react-router';
+import { MenuAuth } from '../LoginRegister/Auth';
 
-function MenuList() {
-  const { userid } = useParams();
+function MenuList({ isLoggedIn }) {
+  const userId = localStorage.getItem('userId');
+  const paths = MenuAuth(isLoggedIn, userId);
+
   return (
-    <ListGroup defaultActiveKey="/" variant="flush" className="d-none d-md-block">
-      <ListGroup.Item action href="/" variant="success">
+    <ListGroup variant="flush" className="d-none d-md-block">
+      <ListGroup.Item action as={NavLink} to={paths.home} className="nav-item">
         LISTINGS
       </ListGroup.Item>
-      <ListGroup.Item action href={`/${userid}/0/reservation`} variant="success">
+      <ListGroup.Item action as={NavLink} to={paths.reservation} className="nav-item">
         ADD RESERVATION
       </ListGroup.Item>
-      <ListGroup.Item action href={`/${userid}/reservations`} variant="success">
+      <ListGroup.Item action as={NavLink} to={paths.userReservations} className="nav-item">
         MY RESERVATIONS
       </ListGroup.Item>
-      <ListGroup.Item action href="#link4" variant="success">
+      <ListGroup.Item action as={NavLink} to={paths.addHouse} className="nav-item">
         ADD LISTING
       </ListGroup.Item>
-      <ListGroup.Item action href={`/${userid}/delete`} variant="success">
+      <ListGroup.Item action as={NavLink} to={paths.deleteHouse} className="nav-item">
         DELETE LISTING
       </ListGroup.Item>
     </ListGroup>
