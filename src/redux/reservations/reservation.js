@@ -1,15 +1,24 @@
 import axios from 'axios';
 
-const initialState = [];
+const initialState = {
+  reservations: [],
+  reservation: {},
+};
 const FETCH_DATA = 'reservations/FETCH_DATA';
 const POST_DATA = 'reservations/POST_DATA';
 
-const reservationsReducer = (state = initialState, action) => {
-  switch (action.type) {
+const reservationsReducer = (state = initialState, { type, payload }) => {
+  switch (type) {
     case FETCH_DATA:
-      return action.payload;
+      return {
+        ...state,
+        reservations: [payload],
+      };
     case POST_DATA:
-      return action.payload;
+      return {
+        ...state,
+        payload,
+      };
     default:
       return state;
   }

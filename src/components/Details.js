@@ -3,7 +3,7 @@ import { BiArrowBack } from 'react-icons/bi';
 import '../details.css';
 import Card from 'react-bootstrap/Card';
 import { useSelector, useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { fetchRooms } from '../redux/rooms/rooms';
@@ -16,15 +16,16 @@ const Detail = (props) => {
   }, []);
   const rooms = useSelector((state) => state.roomsReducer);
   const { houseid } = useParams();
+
   let house = {};
   rooms.map((element) => {
-    if (element.id === parseInt(houseid, 10)) {
+    if (element.id === houseid) {
       house = element;
     }
     return house;
   });
   const {
-    image_url: imageUrl, name, description, price, address, city, country,
+    image_url: imageUrl, name, description, price, address, city, country, id,
   } = props.props;
   return (
     <>
@@ -60,7 +61,9 @@ const Detail = (props) => {
                       </p>
                     </div>
                     <div>
-                      <button variant="success" className="btn-success theme-btn mt-4 rounded" size="lg" type="button">Reserve</button>
+                      <Link to={`/${userid}/${id}/reservation`}>
+                        <button variant="success" className="btn-success theme-btn mt-4 rounded" size="lg" type="button">Reserve</button>
+                      </Link>
                     </div>
                     <div>
                       <a href={`/${userid}`}>

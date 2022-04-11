@@ -105,7 +105,7 @@ const Reservation = () => {
             </DropdownButton>
             <button type="submit" onClick={createReservation} className="book-btn">Book now</button>
           </div>
-          { reservationPost.status === 201
+          { reservationPost.payload && reservationPost.payload.status === 201
             && <p>Reservation was successful!</p>}
         </div>
       </div>
