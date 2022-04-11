@@ -1,30 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BiArrowBack } from 'react-icons/bi';
 import '../details.css';
 import Card from 'react-bootstrap/Card';
-import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import { fetchRooms } from '../redux/rooms/rooms';
 
 const Detail = (props) => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchRooms());
-  }, []);
-
-  const rooms = useSelector((state) => state.roomsReducer);
-  const { user_id: userId, house_id: houseId } = useParams();
-  let house = {};
-
-  rooms.map((element) => {
-    if (element.id === houseId) {
-      house = element;
-    }
-    return house;
-  });
+  const { user_id: userId } = useParams();
 
   const {
     image_url: imageUrl, name, description, price, address, city, country, id,
