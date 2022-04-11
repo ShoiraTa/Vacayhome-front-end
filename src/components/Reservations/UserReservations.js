@@ -8,31 +8,39 @@ import { deleteReservation } from '../../redux/reservations/deleteReservation';
 
 const UserReservations = () => {
   const dispatch = useDispatch();
+  let userid = localStorage.getItem('userId');
+
+  userid = parseInt(userid, 10);
 
   const handleDelete = (e, id) => {
     e.preventDefault();
     dispatch(deleteReservation(id));
     dispatch(fetchRooms());
-    dispatch(fetchReservations());
   };
 
   useEffect(() => {
     dispatch(fetchRooms());
     dispatch(fetchReservations());
-  }, [handleDelete]);
+  }, []);
 
   const rooms = useSelector((state) => state.roomsReducer);
-  const reservations = useSelector((state) => state.reservationsReducer);
+  const reservationsall = useSelector((state) => state.reservationsReducer);
+  const deletedRes = useSelector((state) => state.deleteReservationReducer);
 
-  const { userid } = localStorage.getItem('userId');
+  useEffect(() => {
+    dispatch(fetchRooms());
+    dispatch(fetchReservations());
+  }, [deletedRes]);
+
+  const { reservations } = reservationsall;
 
   return (
     <>
       <h1 className="text-center m-4">Reservations</h1>
       <div className="reservations-container">
         {
-          reservations.map((reservation) => (
-            reservation.user_id === parseInt(userid, 10)
+         reservations[0] && reservations[0].map((reservation) => (
+           reservation.user_id === parseInt(userid, 10)
             && (
               <div key={reservation.id} className="reservation">
                 <Card>
@@ -47,13 +55,15 @@ const UserReservations = () => {
                       key={reservation.id}
                     />
                     <div className="d-flex justify-content-end">
+
                       <button type="submit" variant="primary" onClick={(e) => handleDelete(e, reservation.id)} className="btn btn-danger">Cancel the reservation</button>
+
                     </div>
                   </Card.Body>
                 </Card>
               </div>
             )
-          ))
+         ))
         }
       </div>
     </>

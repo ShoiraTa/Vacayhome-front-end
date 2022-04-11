@@ -66,6 +66,7 @@ body {
   width: 10rem;
   font-weight: 500;
   text-transform: uppercase;
+  font-size: 16px;
 }
 
 .logout-btn {
@@ -94,7 +95,7 @@ body {
 
 .carousel-img-container img {
   height: 100%;
-  width: 80%;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -199,7 +200,7 @@ p {
   box-shadow: none;
 }
 
-.react-datepicker-wrapper {
+.reservations-buttons .react-datepicker-wrapper {
   width: 200px !important;
   display: flex !important;
   align-items: center;

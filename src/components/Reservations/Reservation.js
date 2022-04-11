@@ -41,8 +41,8 @@ const Reservation = () => {
     const postData = {
       booking:
       {
-        user_id: userid,
-        house_id: roomId,
+        user_id: parseInt(userid, 10),
+        house_id: parseInt(roomId, 10),
         date: startDate.toLocaleDateString(),
       },
     };
@@ -105,7 +105,7 @@ const Reservation = () => {
             </DropdownButton>
             <button type="submit" onClick={createReservation} className="book-btn">Book now</button>
           </div>
-          { reservationPost.status === 201
+          { reservationPost.payload && reservationPost.payload.status === 201
             && <p>Reservation was successful!</p>}
         </div>
       </div>

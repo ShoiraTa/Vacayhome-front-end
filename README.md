@@ -2,7 +2,7 @@
 
 # Vacayhome 
 
-> A simple app to rent
+> A simple app to rent vocation apartments
 
 ## Built With
 
@@ -43,6 +43,12 @@ To get a local copy up and running follow these simple example steps.
 - GitHub: [@adamteddychang](https://github.com/adamteddychang)
 - Twitter: [@AdamChang3](https://twitter.com/AdamChang3) 
 - LinkedIn: [You-Wei(Adam) Chang](https://www.linkedin.com/in/adamteddychang/)
+
+👤 **Ugboaja-Uchechi**
+
+- [GitHub](https://github.com/Ugboaja-Uchechi)
+- [LinkedIn](https://www.linkedin.com/in/stephanie-ugboaja-930a2a216/)
+
 
 👤 **Simo Nkosi**
 
