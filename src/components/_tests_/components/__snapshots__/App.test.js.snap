@@ -232,7 +232,9 @@ Object {
                 <div
                   class="homepage-header-container"
                 >
-                  <h1>
+                  <h1
+                    id="h1"
+                  >
                     Top-rated vacation rentals
                   </h1>
                   <p>
@@ -482,7 +484,9 @@ Object {
               <div
                 class="homepage-header-container"
               >
-                <h1>
+                <h1
+                  id="h1"
+                >
                   Top-rated vacation rentals
                 </h1>
                 <p>
