@@ -19,4 +19,9 @@ describe('Home page', () => {
     render(<Provider store={store}><Router><Homepage /></Router></Provider>);
     expect(screen.getByText('Top-rated vacation rentals')).toBeInTheDocument();
   });
+  it('renders correctly', () => {
+    window.localStorage.setItem('userId', 1);
+    const tree = render(<Provider store={store}><Router><Homepage /></Router></Provider>);
+    expect(tree).toMatchSnapshot();
+  });
 });
