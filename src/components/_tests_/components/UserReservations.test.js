@@ -3,11 +3,12 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../../../redux/configureStore';
-import App from '../../../App';
+import UserReservations from '../../Reservations/UserReservations';
 
-describe('App', () => {
+describe('BookAppointment', () => {
   it('renders correctly', () => {
-    const tree = render(<Provider store={store}><Router><App /></Router></Provider>);
+    window.localStorage.setItem('userId', 1);
+    const tree = render(<Provider store={store}><Router><UserReservations /></Router></Provider>);
     expect(tree).toMatchSnapshot();
   });
 });
