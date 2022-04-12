@@ -3,12 +3,11 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../../../redux/configureStore';
-import RemoveHouse from '../../DeleteListing';
+import Register from '../../LoginRegister/Register';
 
-describe('Delete listing', () => {
+describe('Register to app', () => {
   it('renders correctly', () => {
-    window.localStorage.setItem('userId', 1);
-    const tree = render(<Provider store={store}><Router><RemoveHouse /></Router></Provider>);
+    const tree = render(<Provider store={store}><Router><Register /></Router></Provider>);
     expect(tree).toMatchSnapshot();
   });
 });

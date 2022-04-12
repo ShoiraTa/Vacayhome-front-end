@@ -1,0 +1,508 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register to app renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container-fluid"
+      >
+        <div
+          class="login-card col-4 pb-5 bg-white border rounded container"
+        >
+          <div
+            class="logo-wrapper"
+          >
+            <img
+              alt="logo"
+              class="logo-img"
+              src="VacayHome.png"
+            />
+          </div>
+          <form
+            class=""
+          >
+            <div
+              class="mt-3 mb-3"
+            >
+              <input
+                class="form-control"
+                id="formBasicName"
+                placeholder="Full name"
+                required=""
+                type="text"
+              />
+            </div>
+            <div
+              class="mb-3"
+            >
+              <input
+                class="form-control"
+                id="formBasicEmail"
+                placeholder="Email address"
+                required=""
+                type="email"
+              />
+              <small
+                class="text-muted form-text"
+              >
+                We will never share your email with anyone else.
+              </small>
+            </div>
+            <div
+              class="mb-3 text-center"
+            >
+              <button
+                class="btn btn-success"
+                type="submit"
+              >
+                Register
+              </button>
+            </div>
+          </form>
+          <div>
+            <p>
+              Already have an account?
+               
+              <span>
+                <button
+                  class="access-btn text-primary"
+                  type="button"
+                >
+                  Login
+                </button>
+              </span>
+            </p>
+          </div>
+        </div>
+        <div
+          class="carousel carousel slide"
+        >
+          <div
+            class="carousel-indicators"
+          >
+            <button
+              aria-current="true"
+              aria-label="Slide 1"
+              class="active"
+              data-bs-target=""
+              type="button"
+            />
+            <button
+              aria-current="false"
+              aria-label="Slide 2"
+              data-bs-target=""
+              type="button"
+            />
+            <button
+              aria-current="false"
+              aria-label="Slide 3"
+              data-bs-target=""
+              type="button"
+            />
+            <button
+              aria-current="false"
+              aria-label="Slide 4"
+              data-bs-target=""
+              type="button"
+            />
+            <button
+              aria-current="false"
+              aria-label="Slide 5"
+              data-bs-target=""
+              type="button"
+            />
+            <button
+              aria-current="false"
+              aria-label="Slide 6"
+              data-bs-target=""
+              type="button"
+            />
+            <button
+              aria-current="false"
+              aria-label="Slide 7"
+              data-bs-target=""
+              type="button"
+            />
+          </div>
+          <div
+            class="carousel-inner"
+          >
+            <div
+              class="carousel-item active carousel-item"
+            >
+              <img
+                alt="travel vacation"
+                class="d-block w-100"
+                src="https://traveler.marriott.com/wp-content/uploads/2021/02/HuatulcoOaxaca_6VillaEscondida_9.jpg"
+              />
+            </div>
+            <div
+              class="carousel-item carousel-item"
+            >
+              <img
+                alt="travel vacation"
+                class="d-block w-100"
+                src="https://images.squarespace-cdn.com/content/v1/5e72c8bfe21ad940ba788673/1621016255763-WDHM79J11KCDQW4DIKFX/airbnb-short-term-versus-long-term-rentals-thumbnail.jpg"
+              />
+            </div>
+            <div
+              class="carousel-item carousel-item"
+            >
+              <img
+                alt="travel vacation"
+                class="d-block w-100"
+                src="https://media.glampinghub.com/CACHE/images/accommodations/accommodationsaccommodation_20067_listing_image_3312cf45f2bd4132b66383de82807b23-glamping-f7618228-f263-4c69-b8f8-5c73254173e2/b9284237867e3bcf30a77b248c7835ea.jpg"
+              />
+            </div>
+            <div
+              class="carousel-item carousel-item"
+            >
+              <img
+                alt="travel vacation"
+                class="d-block w-100"
+                src="https://www.extraspace.com/blog/wp-content/uploads/2020/10/preparing-home-for-airbnb.jpg"
+              />
+            </div>
+            <div
+              class="carousel-item carousel-item"
+            >
+              <img
+                alt="travel vacation"
+                class="d-block w-100"
+                src="https://media.cntraveler.com/photos/589df60a9b67416638b3bf66/16:9/w_1280,c_limit/luxury-retreats-cr-courtesy.jpg"
+              />
+            </div>
+            <div
+              class="carousel-item carousel-item"
+            >
+              <img
+                alt="travel vacation"
+                class="d-block w-100"
+                src="https://rdcnewscdn.realtor.com/wp-content/uploads/2019/04/Airbnb-Rental-Property-1.jpg"
+              />
+            </div>
+            <div
+              class="carousel-item carousel-item"
+            >
+              <img
+                alt="travel vacation"
+                class="d-block w-100"
+                src="https://media.cntraveler.com/photos/5e9907c14ab09800086faf63/master/w_1400,h_933,c_limit/airbnb-view-37143825.jpg"
+              />
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              aria-hidden="true"
+              class="carousel-control-prev-icon"
+            />
+            <span
+              class="visually-hidden"
+            >
+              Previous
+            </span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              aria-hidden="true"
+              class="carousel-control-next-icon"
+            />
+            <span
+              class="visually-hidden"
+            >
+              Next
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container-fluid"
+    >
+      <div
+        class="login-card col-4 pb-5 bg-white border rounded container"
+      >
+        <div
+          class="logo-wrapper"
+        >
+          <img
+            alt="logo"
+            class="logo-img"
+            src="VacayHome.png"
+          />
+        </div>
+        <form
+          class=""
+        >
+          <div
+            class="mt-3 mb-3"
+          >
+            <input
+              class="form-control"
+              id="formBasicName"
+              placeholder="Full name"
+              required=""
+              type="text"
+            />
+          </div>
+          <div
+            class="mb-3"
+          >
+            <input
+              class="form-control"
+              id="formBasicEmail"
+              placeholder="Email address"
+              required=""
+              type="email"
+            />
+            <small
+              class="text-muted form-text"
+            >
+              We will never share your email with anyone else.
+            </small>
+          </div>
+          <div
+            class="mb-3 text-center"
+          >
+            <button
+              class="btn btn-success"
+              type="submit"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+        <div>
+          <p>
+            Already have an account?
+             
+            <span>
+              <button
+                class="access-btn text-primary"
+                type="button"
+              >
+                Login
+              </button>
+            </span>
+          </p>
+        </div>
+      </div>
+      <div
+        class="carousel carousel slide"
+      >
+        <div
+          class="carousel-indicators"
+        >
+          <button
+            aria-current="true"
+            aria-label="Slide 1"
+            class="active"
+            data-bs-target=""
+            type="button"
+          />
+          <button
+            aria-current="false"
+            aria-label="Slide 2"
+            data-bs-target=""
+            type="button"
+          />
+          <button
+            aria-current="false"
+            aria-label="Slide 3"
+            data-bs-target=""
+            type="button"
+          />
+          <button
+            aria-current="false"
+            aria-label="Slide 4"
+            data-bs-target=""
+            type="button"
+          />
+          <button
+            aria-current="false"
+            aria-label="Slide 5"
+            data-bs-target=""
+            type="button"
+          />
+          <button
+            aria-current="false"
+            aria-label="Slide 6"
+            data-bs-target=""
+            type="button"
+          />
+          <button
+            aria-current="false"
+            aria-label="Slide 7"
+            data-bs-target=""
+            type="button"
+          />
+        </div>
+        <div
+          class="carousel-inner"
+        >
+          <div
+            class="carousel-item active carousel-item"
+          >
+            <img
+              alt="travel vacation"
+              class="d-block w-100"
+              src="https://traveler.marriott.com/wp-content/uploads/2021/02/HuatulcoOaxaca_6VillaEscondida_9.jpg"
+            />
+          </div>
+          <div
+            class="carousel-item carousel-item"
+          >
+            <img
+              alt="travel vacation"
+              class="d-block w-100"
+              src="https://images.squarespace-cdn.com/content/v1/5e72c8bfe21ad940ba788673/1621016255763-WDHM79J11KCDQW4DIKFX/airbnb-short-term-versus-long-term-rentals-thumbnail.jpg"
+            />
+          </div>
+          <div
+            class="carousel-item carousel-item"
+          >
+            <img
+              alt="travel vacation"
+              class="d-block w-100"
+              src="https://media.glampinghub.com/CACHE/images/accommodations/accommodationsaccommodation_20067_listing_image_3312cf45f2bd4132b66383de82807b23-glamping-f7618228-f263-4c69-b8f8-5c73254173e2/b9284237867e3bcf30a77b248c7835ea.jpg"
+            />
+          </div>
+          <div
+            class="carousel-item carousel-item"
+          >
+            <img
+              alt="travel vacation"
+              class="d-block w-100"
+              src="https://www.extraspace.com/blog/wp-content/uploads/2020/10/preparing-home-for-airbnb.jpg"
+            />
+          </div>
+          <div
+            class="carousel-item carousel-item"
+          >
+            <img
+              alt="travel vacation"
+              class="d-block w-100"
+              src="https://media.cntraveler.com/photos/589df60a9b67416638b3bf66/16:9/w_1280,c_limit/luxury-retreats-cr-courtesy.jpg"
+            />
+          </div>
+          <div
+            class="carousel-item carousel-item"
+          >
+            <img
+              alt="travel vacation"
+              class="d-block w-100"
+              src="https://rdcnewscdn.realtor.com/wp-content/uploads/2019/04/Airbnb-Rental-Property-1.jpg"
+            />
+          </div>
+          <div
+            class="carousel-item carousel-item"
+          >
+            <img
+              alt="travel vacation"
+              class="d-block w-100"
+              src="https://media.cntraveler.com/photos/5e9907c14ab09800086faf63/master/w_1400,h_933,c_limit/airbnb-view-37143825.jpg"
+            />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            aria-hidden="true"
+            class="carousel-control-prev-icon"
+          />
+          <span
+            class="visually-hidden"
+          >
+            Previous
+          </span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            aria-hidden="true"
+            class="carousel-control-next-icon"
+          />
+          <span
+            class="visually-hidden"
+          >
+            Next
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

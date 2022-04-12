@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Book a reservation renders correctly 1`] = `
+exports[`Delete listing renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
