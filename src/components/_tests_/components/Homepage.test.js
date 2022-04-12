@@ -7,13 +7,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import store from '../../../redux/configureStore';
 import Homepage from '../../Homepage/Homepage';
 
-// it('matches Homepage', () => {
-//   const homepage = renderer.create(
-//     <Homepage />,
-//   ).toJSON();
-//   expect(homepage).toHaveBeenCalled();
-// });
-
 describe('Home page', () => {
   test('it renders text in home page', () => {
     render(<Provider store={store}><Router><Homepage /></Router></Provider>);
