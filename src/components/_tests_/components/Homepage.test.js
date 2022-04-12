@@ -15,7 +15,7 @@ import Homepage from '../../Homepage/Homepage';
 // });
 
 describe('Home page', () => {
-  test('it renders the given name in the greeting', () => {
+  test('it renders text in home page', () => {
     render(<Provider store={store}><Router><Homepage /></Router></Provider>);
     expect(screen.getByText('Top-rated vacation rentals')).toBeInTheDocument();
   });
