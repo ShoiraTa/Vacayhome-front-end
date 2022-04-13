@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import { Button } from 'react-bootstrap';
-import Slider from './SliderHomepage';
+import SliderHomepage from './SliderHomepage';
 
 function Homepage({ isLoggedIn }) {
   const navigate = useNavigate();
@@ -23,7 +23,9 @@ function Homepage({ isLoggedIn }) {
         <h1 id="h1">Top-rated vacation rentals</h1>
         <p>Find and book unique accommodations</p>
       </div>
-      <Slider />
+
+      <SliderHomepage isLoggedIn={isLoggedIn} />
+
       {
         isLoggedIn
         && (

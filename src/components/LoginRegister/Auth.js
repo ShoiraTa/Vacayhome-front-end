@@ -1,8 +1,8 @@
 const Auth = (isLoggedIn) => {
   const ProtectedPaths = {
     home: ':user_id',
-    details: ':user_id/:houseid/details',
-    reservation: ':user_id/:houseid/reservation',
+    details: ':user_id/:house_id/details',
+    reservation: ':user_id/:house_id/reservation',
     userReservations: 'users/:user_id/reservations',
     addHouse: 'new_listing',
     deleteHouse: ':user_id/delete',
@@ -12,7 +12,7 @@ const Auth = (isLoggedIn) => {
 
   const defaultPaths = {
     home: '',
-    details: ':houseid/details',
+    details: ':house_id/details',
     reservation: 'login',
     userReservations: 'reservations',
     addHouse: 'new_listing',
@@ -24,11 +24,10 @@ const Auth = (isLoggedIn) => {
   return isLoggedIn ? ProtectedPaths : defaultPaths;
 };
 
-export const MenuAuth = (isLoggedIn, userId) => {
+export const MenuAuth = (isLoggedIn, userId, houseId = 0) => {
   const ProtectedPaths = {
     home: `/${userId}`,
-    details: ':user_id/:houseid/details',
-    reservation: `/${userId}/0/reservation`,
+    reservation: `/${userId}/${houseId}/reservation`,
     userReservations: `users/${userId}/reservations`,
     addHouse: 'new_listing',
     deleteHouse: `/${userId}/delete`,
@@ -38,7 +37,6 @@ export const MenuAuth = (isLoggedIn, userId) => {
 
   const defaultPaths = {
     home: '',
-    details: ':houseid/details',
     reservation: 'login',
     userReservations: 'reservations',
     addHouse: 'new_listing',
