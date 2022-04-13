@@ -20,10 +20,12 @@ function Homepage({ isLoggedIn }) {
   return (
     <div>
       <div className="homepage-header-container">
-        <h1>Top-rated vacation rentals</h1>
+        <h1 id="h1">Top-rated vacation rentals</h1>
         <p>Find and book unique accommodations</p>
       </div>
-      <SliderHomepage />
+
+      <SliderHomepage isLoggedIn={isLoggedIn} />
+
       {
         isLoggedIn
         && (

@@ -21,10 +21,9 @@ const Reservation = () => {
   const rooms = useSelector((state) => state);
   const reservationPost = useSelector((state) => state.reservationsReducer);
 
-  const { houseid } = useParams();
-  const userid = localStorage.getItem('userId');
+  const { user_id: userId, house_id: houseId } = useParams();
 
-  const [roomId, setroomId] = useState(houseid);
+  const [roomId, setRoomId] = useState(houseId);
 
   let image = '';
   let location = '';
@@ -41,7 +40,7 @@ const Reservation = () => {
     const postData = {
       booking:
       {
-        user_id: parseInt(userid, 10),
+        user_id: parseInt(userId, 10),
         house_id: parseInt(roomId, 10),
         date: startDate.toLocaleDateString(),
       },
@@ -65,7 +64,7 @@ const Reservation = () => {
         }}
       >
         <div className="reservation-header-links">
-          <Link to={`/${userid}`}><FaArrowLeft style={{ color: '#fff', fontSize: '1.2rem', margin: '5px' }} /></Link>
+          <Link to={`/${userId}`}><FaArrowLeft style={{ color: '#fff', fontSize: '1.2rem', margin: '5px' }} /></Link>
         </div>
         <div className="reservations-description">
           <div className="reservations-header">
@@ -75,9 +74,9 @@ const Reservation = () => {
             Pick a House to Reserve!
           </p>
           {
-           parseInt(houseid, 10) === 0 && (
+           parseInt(houseId, 10) === 0 && (
            <select
-             onChange={(e) => setroomId(e.target.value)}
+             onChange={(e) => setRoomId(e.target.value)}
              align="end"
              style={{
                outline: 'none',
