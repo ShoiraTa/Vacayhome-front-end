@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { fetchRooms } from '../redux/rooms/rooms';
 import { deleteRoom } from '../redux/rooms/roomsDeleteReducer';
 
 function RemoveHouse() {
-  const [roomId, setroomId] = useState();
+  const [roomId, setRoomId] = useState();
+  const { user_id: userId } = useParams();
   const dispatch = useDispatch();
-  const userid = localStorage.getItem('userId');
   const navigate = useNavigate();
 
   const handleDelete = () => {
     dispatch(deleteRoom(roomId));
     dispatch(fetchRooms());
-    navigate(`/${userid}`);
+    navigate(`/${userId}`);
   };
 
   useEffect(() => {
@@ -46,7 +46,7 @@ function RemoveHouse() {
           top: '0',
         }}
       >
-        <Link to={`/${userid}`}><FaArrowLeft style={{ color: '#fff', fontSize: '2rem', margin: '5px' }} /></Link>
+        <Link to={`/${userId}`}><FaArrowLeft style={{ color: '#fff', fontSize: '2rem', margin: '5px' }} /></Link>
       </div>
 
       <form
@@ -68,7 +68,7 @@ function RemoveHouse() {
             borderRadius: '2px',
             margin: '2rem 0',
           }}
-          onChange={(e) => setroomId(e.target.value)}
+          onChange={(e) => setRoomId(e.target.value)}
           placeholder="Choose a House you want to reserve."
           id="selectDropdown"
         >
@@ -81,7 +81,7 @@ function RemoveHouse() {
             </option>
           ))}
         </select>
-        <button to={`/${userid}`} onClick={() => { handleDelete(); }} className="submit book-btn" type="submit">Submit</button>
+        <button to={`/${userId}`} onClick={() => { handleDelete(); }} className="submit book-btn" type="submit">Submit</button>
       </form>
 
     </div>

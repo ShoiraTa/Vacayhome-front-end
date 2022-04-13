@@ -6,7 +6,7 @@ import store from './redux/configureStore';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 
-ReactDOM.render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Provider store={store}>
@@ -14,7 +14,6 @@ ReactDOM.render(
       </Provider>
     </Router>
   </React.StrictMode>,
-  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
