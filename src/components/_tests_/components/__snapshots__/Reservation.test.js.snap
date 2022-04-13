@@ -1,17 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Delete listing renders correctly 1`] = `
+exports[`Book a reservation renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
         class="reservations-container"
-        style="background-position: center; background-size: cover; padding: 2rem;"
+        style="background-position: center; background-size: cover;"
       >
         <div
           class="reservation-header-links"
-          style="position: fixed; top: 0px;"
         >
           <a
             href="/undefined"
@@ -21,7 +20,7 @@ Object {
               height="1em"
               stroke="currentColor"
               stroke-width="0"
-              style="color: rgb(255, 255, 255); font-size: 2rem; margin: 5px;"
+              style="color: rgb(255, 255, 255); font-size: 1.2rem; margin: 5px;"
               viewBox="0 0 448 512"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -32,44 +31,65 @@ Object {
             </svg>
           </a>
         </div>
-        <form
-          class="form"
-          style="display: flex; align-items: center; flex-direction: column;"
+        <div
+          class="reservations-description"
         >
-          <h1>
-            Remove a House from our Listing
-          </h1>
-          <select
-            align="end"
-            id="selectDropdown"
-            placeholder="Choose a House you want to reserve."
-            style="outline: none; width: 95%; border-radius: 2px; margin: 2rem 0px;"
+          <div
+            class="reservations-header"
           >
-            <option
-              disabled=""
+            <h1>
+              Book the place
+            </h1>
+          </div>
+          <p>
+            Pick a House to Reserve!
+          </p>
+          <div
+            class="reservations-buttons"
+          >
+            <div
+              class="react-datepicker-wrapper"
             >
-              Choose a House
-            </option>
-          </select>
-          <button
-            class="submit book-btn"
-            to="/undefined"
-            type="submit"
-          >
-            Submit
-          </button>
-        </form>
+              <div
+                class="react-datepicker__input-container"
+              >
+                <input
+                  class=""
+                  type="text"
+                  value="04/13/2022"
+                />
+              </div>
+            </div>
+            <div
+              class="dropdown"
+            >
+              <button
+                aria-expanded="false"
+                class="dropdown-toggle btn btn-primary"
+                id="dropdown-menu-align-end"
+                type="button"
+              >
+                Location
+              </button>
+            </div>
+            <button
+              class="book-btn"
+              type="submit"
+            >
+              Book now
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
       class="reservations-container"
-      style="background-position: center; background-size: cover; padding: 2rem;"
+      style="background-position: center; background-size: cover;"
     >
       <div
         class="reservation-header-links"
-        style="position: fixed; top: 0px;"
       >
         <a
           href="/undefined"
@@ -79,7 +99,7 @@ Object {
             height="1em"
             stroke="currentColor"
             stroke-width="0"
-            style="color: rgb(255, 255, 255); font-size: 2rem; margin: 5px;"
+            style="color: rgb(255, 255, 255); font-size: 1.2rem; margin: 5px;"
             viewBox="0 0 448 512"
             width="1em"
             xmlns="http://www.w3.org/2000/svg"
@@ -90,33 +110,55 @@ Object {
           </svg>
         </a>
       </div>
-      <form
-        class="form"
-        style="display: flex; align-items: center; flex-direction: column;"
+      <div
+        class="reservations-description"
       >
-        <h1>
-          Remove a House from our Listing
-        </h1>
-        <select
-          align="end"
-          id="selectDropdown"
-          placeholder="Choose a House you want to reserve."
-          style="outline: none; width: 95%; border-radius: 2px; margin: 2rem 0px;"
+        <div
+          class="reservations-header"
         >
-          <option
-            disabled=""
+          <h1>
+            Book the place
+          </h1>
+        </div>
+        <p>
+          Pick a House to Reserve!
+        </p>
+        <div
+          class="reservations-buttons"
+        >
+          <div
+            class="react-datepicker-wrapper"
           >
-            Choose a House
-          </option>
-        </select>
-        <button
-          class="submit book-btn"
-          to="/undefined"
-          type="submit"
-        >
-          Submit
-        </button>
-      </form>
+            <div
+              class="react-datepicker__input-container"
+            >
+              <input
+                class=""
+                type="text"
+                value="04/13/2022"
+              />
+            </div>
+          </div>
+          <div
+            class="dropdown"
+          >
+            <button
+              aria-expanded="false"
+              class="dropdown-toggle btn btn-primary"
+              id="dropdown-menu-align-end"
+              type="button"
+            >
+              Location
+            </button>
+          </div>
+          <button
+            class="book-btn"
+            type="submit"
+          >
+            Book now
+          </button>
+        </div>
+      </div>
     </div>
   </div>,
   "debug": [Function],

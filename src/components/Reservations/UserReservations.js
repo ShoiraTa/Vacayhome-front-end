@@ -25,12 +25,6 @@ const UserReservations = () => {
 
   const rooms = useSelector((state) => state.roomsReducer);
   const reservationsall = useSelector((state) => state.reservationsReducer);
-  const deletedRes = useSelector((state) => state.deleteReservationReducer);
-
-  useEffect(() => {
-    dispatch(fetchRooms());
-    dispatch(fetchReservations());
-  }, [deletedRes]);
 
   const { reservations } = reservationsall;
 
