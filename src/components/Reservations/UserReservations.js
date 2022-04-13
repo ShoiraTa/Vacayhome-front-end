@@ -8,9 +8,15 @@ import { deleteReservation } from '../../redux/reservations/deleteReservation';
 
 const UserReservations = () => {
   const dispatch = useDispatch();
-  let userid = localStorage.getItem('userId');
+  const rooms = useSelector((state) => state.roomsReducer);
+  const { reservations } = useSelector((state) => state.reservationsReducer);
+  const deletedRes = useSelector((state) => state.deleteReservationReducer);
+  const userId = parseInt(localStorage.getItem('userId'), 10);
 
-  userid = parseInt(userid, 10);
+  useEffect(() => {
+    dispatch(fetchRooms());
+    dispatch(fetchReservations());
+  }, [deletedRes]);
 
   const handleDelete = (e, id) => {
     e.preventDefault();
@@ -18,23 +24,13 @@ const UserReservations = () => {
     dispatch(fetchRooms());
   };
 
-  useEffect(() => {
-    dispatch(fetchRooms());
-    dispatch(fetchReservations());
-  }, []);
-
-  const rooms = useSelector((state) => state.roomsReducer);
-  const reservationsall = useSelector((state) => state.reservationsReducer);
-
-  const { reservations } = reservationsall;
-
   return (
     <>
       <h1 className="text-center m-4">Reservations</h1>
       <div className="reservations-container">
         {
          reservations[0] && reservations[0].map((reservation) => (
-           reservation.user_id === parseInt(userid, 10)
+           reservation.user_id === parseInt(userId, 10)
             && (
               <div key={reservation.id} className="reservation">
                 <Card>
