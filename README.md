@@ -13,6 +13,23 @@
 - OOP
 - webpack
 
+## Live demo
+
+[Follow the link](https://vacay-home.netlify.app/)
+
+
+
+### Kanban boards
+
+Initial state | After completion
+------------- | -------------
+![Screenshot 2022-04-13 at 19 27 54](https://user-images.githubusercontent.com/63560332/163344756-149baf49-d361-4356-9f4d-ac017c0401b6.png)  | ![Screenshot 2022-04-13 at 19 30 04](https://user-images.githubusercontent.com/63560332/163344735-fc688899-73a4-4c85-9fab-759d2bbebc58.png)
+
+### Preview
+
+Homepage | Reservations page
+------------- | -------------
+<img width="1392" alt="Screenshot 2022-04-14 at 10 01 52" src="https://user-images.githubusercontent.com/63560332/163343421-7f80f067-c46d-4fc0-9d8d-ec92b4572e07.png"> | <img width="1392" alt="Screenshot 2022-04-14 at 10 02 08" src="https://user-images.githubusercontent.com/63560332/163343425-c2c2a6b8-0b62-48f4-9ba7-bb501c124446.png">
 
 ## Getting Started
 
@@ -46,8 +63,8 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Ugboaja-Uchechi**
 
-- [GitHub](https://github.com/Ugboaja-Uchechi)
-- [LinkedIn](https://www.linkedin.com/in/stephanie-ugboaja-930a2a216/)
+- GitHub: [GitHub](https://github.com/Ugboaja-Uchechi)
+- LinkedIn:[LinkedIn](https://www.linkedin.com/in/stephanie-ugboaja-930a2a216/)
 
 
 👤 **Simo Nkosi**
