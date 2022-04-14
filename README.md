@@ -13,6 +13,21 @@
 - OOP
 - webpack
 
+## Live demo
+
+(Follow the link)[https://vacay-home.netlify.app/]
+
+## Kanban boards
+
+Initial state | After completion
+------------- | -------------
+https://user-images.githubusercontent.com/63560332/163344756-149baf49-d361-4356-9f4d-ac017c0401b6.png  | https://user-images.githubusercontent.com/63560332/163344735-fc688899-73a4-4c85-9fab-759d2bbebc58.png
+
+## Preview
+
+Homepage | Reservations page
+------------- | -------------
+https://user-images.githubusercontent.com/63560332/163343421-7f80f067-c46d-4fc0-9d8d-ec92b4572e07.png | https://user-images.githubusercontent.com/63560332/163343425-c2c2a6b8-0b62-48f4-9ba7-bb501c124446.png
 
 ## Getting Started
 
